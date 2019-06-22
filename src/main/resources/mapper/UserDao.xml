@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nuc.calvin.ssm.dao.UserDao">
+    <insert id="addUser" useGeneratedKeys="true">
+          INSERT into user (userName,email,password,userHead,
+          signature,following,fansCount,subscribeCount)
+          values (#{userName} ,#{email} ,#{password} ,#{userHead}
+          ,#{signature},#{following},#{fansCount} ,#{subscribeCount}
+            ,#{singUpTime} )
+    </insert>
+    <select id="queryById" resultType="com.nuc.calvin.ssm.entity.User">
+    select
+            userId,
+            userName,
+            email,
+            fansCount,
+            subscribeCount,
+            shareCount,
+            singUpTime
+    from
+            user
+            where userId=#{id}
+            order by
+            userId desc
+</select>
+
+    <select id="queryAll" resultType="com.nuc.calvin.ssm.entity.User">
+        select * from user
+    </select>
+
+    <update id="updateUser" parameterType="com.nuc.calvin.ssm.entity.User">
+        update user
+        <set>
+            <if test="email != null">email=#{email}</if>
+            <if test="userName != null">userName=#{userName}</if>
+            <if test="password != null">password=#{password}</if>
+            <if test="signature != null">signature=#{signature}</if>
+            <if test="fansCount != null">fansCount=#{fansCount}</if>
+            <if test="subscribeCount != null">subscribeCount=#{subscribeCount}</if>
+        </set>
+    </update>
+
+    <delete id="deleteUser" parameterType="com.nuc.calvin.ssm.entity.User">
+        delete * from user where userId=#{id}
+    </delete>
+</mapper>
