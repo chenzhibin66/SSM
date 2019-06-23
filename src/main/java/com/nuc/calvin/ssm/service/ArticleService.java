@@ -1,4 +1,4 @@
-package com.nuc.calvin.ssm.dao;
+package com.nuc.calvin.ssm.service;
 
 import com.nuc.calvin.ssm.entity.Article;
 
@@ -8,35 +8,29 @@ import java.util.List;
  * @author Calvin
  * @Description:
  */
-public interface ArticleDao {
+public interface ArticleService {
     /**
-     * 通过文章id查询
+     * 查询一篇文章
      *
      * @param articleId
      * @return
      */
-    Article QueryById(int articleId);
+    Article getById(int articleId);
 
     /**
      * 查询所有文章
      *
      * @return
      */
-    List<Article> QueryAll();
-
-    /**
-     * 增加文章
-     * @param article
-     * @return
-     */
-    int addArticle(Article article);
+    List<Article> getArticleList();
 
     /**
      * 删除文章
-     *
      * @param articleId
      * @return
      */
-    int deleteArticle(int articleId);
+   int deleteArticle(int articleId);
+
+
 
 }

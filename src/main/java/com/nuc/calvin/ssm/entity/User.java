@@ -15,6 +15,9 @@ public class User {
     private String signature;
     private boolean following;
 
+
+
+
     /**
      * 粉丝数
      */
@@ -35,6 +38,7 @@ public class User {
      * 注册时间
      */
     private Date singUpTime;
+
 
     public int getUserId() {
         return userId;
@@ -130,5 +134,23 @@ public class User {
 
     public void setSingUpTime(Date singUpTime) {
         this.singUpTime = singUpTime;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", userHead='" + userHead + '\'' +
+                ", signature='" + signature + '\'' +
+                ", following=" + following +
+                ", fansCount=" + fansCount +
+                ", collcetCount=" + collcetCount +
+                ", subscribeCount=" + subscribeCount +
+                ", shareCount=" + shareCount +
+                ", singUpTime=" + singUpTime +
+                '}';
     }
 }

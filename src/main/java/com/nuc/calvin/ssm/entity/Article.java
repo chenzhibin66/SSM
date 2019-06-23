@@ -10,16 +10,15 @@ public class Article {
     /**
      * 文章id
      */
-    private int id;
+    private int articleId;
     /**
-     *是否广告
+     * 是否广告
      */
     private boolean isAdvertorial;
     /**
-     * 文章作者的用户信息字段
+     * 作者id
      */
-    private User  user;
-
+    private int authorId;
     /**
      * 是否被点赞
      */
@@ -51,12 +50,32 @@ public class Article {
      */
     private Date createTime;
 
-    public int getId() {
-        return id;
+    private User user;
+
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "articleId=" + articleId +
+                ", isAdvertorial=" + isAdvertorial +
+                ", authorId=" + authorId +
+                ", isFavoured=" + isFavoured +
+                ", favourCount=" + favourCount +
+                ", commentCount=" + commentCount +
+                ", collect=" + collect +
+                ", collectCount=" + collectCount +
+                ", articleUrl='" + articleUrl + '\'' +
+                ", createTime=" + createTime +
+                ", user=" + user +
+                '}';
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getArticleId() {
+        return articleId;
+    }
+
+    public void setArticleId(int articleId) {
+        this.articleId = articleId;
     }
 
     public boolean isAdvertorial() {
@@ -67,12 +86,12 @@ public class Article {
         isAdvertorial = advertorial;
     }
 
-    public User getUser() {
-        return user;
+    public int getAuthorId() {
+        return authorId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setAuthorId(int authorId) {
+        this.authorId = authorId;
     }
 
     public boolean isFavoured() {
@@ -129,5 +148,13 @@ public class Article {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

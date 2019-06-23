@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nuc.calvin.ssm.dao.ArticleDao">
+    <select id="QueryById" resultType="com.nuc.calvin.ssm.entity.Article">
+        select * from article where articleId =#{articleId}
+    </select>
+
+    <select id="QueryAll" resultType="com.nuc.calvin.ssm.entity.Article">
+        select * from article
+    </select>
+
+    <insert id="addArticle" useGeneratedKeys="true" keyColumn="articleId" keyProperty="articleId"
+            parameterType="com.nuc.calvin.ssm.entity.Article">
+        insert into article(isAdvertorial,authorId,isFavoured,favourCount
+        ,commentCount,collect,collectCount,articleUrl,createTime)
+        values
+        (#{isAdvertorial} ,#{authorId}   ,#{isFavoured} ,#{favourCount}
+        ,#{commentCount} ,#{collect} ,#{collectCount}
+         ,#{articleUrl}  ,#{createTime} )
+    </insert>
+
+    <delete id="deleteArticle" parameterType="com.nuc.calvin.ssm.entity.Article">
+        delete from article where articleId=#{articleId}
+    </delete>
+</mapper>

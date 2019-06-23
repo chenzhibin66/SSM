@@ -5,10 +5,10 @@
 <mapper namespace="com.nuc.calvin.ssm.dao.UserDao">
     <insert id="addUser" useGeneratedKeys="true">
           INSERT into user (userName,email,password,userHead,
-          signature,following,fansCount,subscribeCount,shareCount,singUpTime)
+          signature,following,fansCount,subscribeCount)
           values (#{userName} ,#{email} ,#{password} ,#{userHead}
           ,#{signature},#{following},#{fansCount} ,#{subscribeCount}
-            ,#{shareCount} ,#{singUpTime}  )
+            ,#{singUpTime} )
     </insert>
     <select id="queryById" resultType="com.nuc.calvin.ssm.entity.User">
     select
