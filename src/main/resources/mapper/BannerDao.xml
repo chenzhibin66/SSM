@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nuc.calvin.ssm.dao.BannerDao">
+
+    <select id="queryBannerById" resultType="com.nuc.calvin.ssm.entity.Banner" parameterType="int">
+        select * from banner where bannerId =#{bannerId}
+    </select>
+
+    <select id="queryBanner" resultType="com.nuc.calvin.ssm.entity.Banner">
+        select * from banner
+    </select>
+
+    <insert id="insertBanner" useGeneratedKeys="true" parameterType="com.nuc.calvin.ssm.entity.Banner">
+        insert into banner(bannerImage) values (#{bannerImage,jdbcType=VARCHAR} )
+    </insert>
+
+    <update id="updateBanner" parameterType="com.nuc.calvin.ssm.entity.Banner">
+        update banner
+        <set>
+            <if test="articleId != null">articleId=#{articleId}</if>
+            <if test="bannerImage != null">bannerImage=#{bannerImage,jdbcType=VARCHAR}</if>
+        </set>
+    </update>
+
+    <delete id="deleteBanner" parameterType="com.nuc.calvin.ssm.entity.Banner">
+        delete from banner where bannerId =#{bannerId}
+    </delete>
+</mapper>

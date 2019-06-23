@@ -43,6 +43,16 @@
     </update>
 
     <delete id="deleteUser" parameterType="com.nuc.calvin.ssm.entity.User">
-        delete * from user where userId=#{id}
+        delete  from user where userId=#{id}
     </delete>
+
+
+    <resultMap id="UserDaoResultMap" type="com.nuc.calvin.ssm.entity.User">
+        <id column="user_id" property="userId" jdbcType="INTEGER"/>
+        <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="userLogin" parameterType="com.nuc.calvin.ssm.entity.User" resultMap="UserDaoResultMap">
+        select * from user where userName =#{userName,jdbcType=VARCHAR} and password =#{password,jdbcType=VARCHAR}
+    </select>
 </mapper>

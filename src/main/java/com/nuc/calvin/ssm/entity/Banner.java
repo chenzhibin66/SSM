@@ -9,6 +9,17 @@ public class Banner {
     private int articleId;
     private String bannerImage;
 
+    private Article article;
+
+
+    public Article getArticle() {
+        return article;
+    }
+
+    public void setArticle(Article article) {
+        this.article = article;
+    }
+
     public int getBannerId() {
         return bannerId;
     }

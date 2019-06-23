@@ -10,6 +10,7 @@ import java.util.List;
  */
 public interface UserDao {
 
+
     /**
      * 通过id查询单个用户
      *
@@ -26,7 +27,8 @@ public interface UserDao {
     List<User> queryAll();
 
     /**
-     * 新增一个用户
+     * 注册用户
+     *
      * @param user
      * @return
      */
@@ -34,6 +36,7 @@ public interface UserDao {
 
     /**
      * 更新用户信息
+     *
      * @param user
      * @return
      */
@@ -41,8 +44,14 @@ public interface UserDao {
 
     /**
      * 删除用户
+     *
      * @param id
      * @return
      */
     int deleteUser(int id);
+
+    /**
+     * 用户登录
+     */
+    User userLogin(User user);
 }
