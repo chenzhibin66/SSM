@@ -2,6 +2,7 @@ package com.nuc.calvin.ssm.dao;
 
 import com.nuc.calvin.ssm.entity.Article;
 import com.nuc.calvin.ssm.entity.ArticleCustom;
+import com.nuc.calvin.ssm.entity.ArticleVo;
 
 import java.util.List;
 
@@ -16,21 +17,29 @@ public interface ArticleCustomDao {
      * @param userId
      * @return
      */
-    public List<ArticleCustom> queryByUserId(Integer userId);
+    List<ArticleCustom> queryArticleByUserId(Integer userId);
+
+    /**
+     * 根据文章id查询文章
+     *
+     * @param articleId
+     * @return
+     */
+    List<ArticleCustom> queryArticleByArticleId(Integer articleId);
 
     /**
      * 分享文章
      *
-     * @param article
+     * @param articleVo
      */
-    public void postArticle(Article article);
+    void postArticle(ArticleVo articleVo);
 
     /**
      * 根据文章id删除文章
      *
      * @param articleId
      */
-    public void deleteByArticleId(Integer articleId);
+    void deleteByArticleId(Integer articleId);
 
     /**
      * 查询赞的次数
@@ -38,7 +47,7 @@ public interface ArticleCustomDao {
      * @param articleId
      * @return
      */
-    public int queryLikeCount(Integer articleId);
+    int queryLikeCount(Integer articleId);
 
     /**
      * 查询评论次数
@@ -46,7 +55,7 @@ public interface ArticleCustomDao {
      * @param articleId
      * @return
      */
-    public int queryCommentCount(Integer articleId);
+    int queryCommentCount(Integer articleId);
 
     /**
      * 根据用户id查询被订阅的文章
@@ -54,7 +63,7 @@ public interface ArticleCustomDao {
      * @param userId
      * @return
      */
-    public List<ArticleCustom> queryCollectCount(Integer userId);
+    List<ArticleCustom> queryCollectArticle(Integer userId);
 
     /**
      * 根据关键字搜索文章
@@ -62,12 +71,13 @@ public interface ArticleCustomDao {
      * @param keyWord
      * @return
      */
-    public List<ArticleCustom> queryArticleByWord(String keyWord);
+    List<ArticleCustom> queryArticleByWord(String keyWord);
 
     /**
      * 查询回复次数
+     *
      * @param articleId
      * @return
      */
-    public int queryReplyCount(Integer articleId);
+    int queryReplyCount(Integer articleId);
 }
