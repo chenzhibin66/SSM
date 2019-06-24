@@ -8,33 +8,49 @@ import java.util.Date;
  */
 public class Comment {
     /**
-     * 评论的id
+     * 评论id
      */
-    public int id;
+    private Integer commentId;
     /**
-     * 评论的内容
+     * 用户id
      */
-    public String commentContent;
+    private Integer userId;
     /**
-     * 评论创建时间
+     * 文章id
      */
-    public Date commentTime;
+    private Integer articleId;
     /**
-     * 评论作者的用户信息
+     * 评论内容
      */
-    public User user;
+    private String commentContent;
+    /**
+     * 评论时间
+     */
+    private Date commentTime;
 
-    /**
-     * 评论的文章信息
-     */
-    public Article article;
 
-    public int getId() {
-        return id;
+    public Integer getCommentId() {
+        return commentId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCommentId(Integer commentId) {
+        this.commentId = commentId;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public Integer getArticleId() {
+        return articleId;
+    }
+
+    public void setArticleId(Integer articleId) {
+        this.articleId = articleId;
     }
 
     public String getCommentContent() {
@@ -51,22 +67,6 @@ public class Comment {
 
     public void setCommentTime(Date commentTime) {
         this.commentTime = commentTime;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Article getArticle() {
-        return article;
-    }
-
-    public void setArticle(Article article) {
-        this.article = article;
     }
 }
 

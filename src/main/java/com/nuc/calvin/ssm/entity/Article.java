@@ -10,128 +10,46 @@ public class Article {
     /**
      * 文章id
      */
-    private int articleId;
-    /**
-     * 是否广告
-     */
-    private boolean isAdvertorial;
+    private Integer articleId;
     /**
      * 作者id
      */
-    private int authorId;
+    private Integer userId;
     /**
-     * 是否被点赞
+     * 文章标题
      */
-    private boolean isFavoured;
-
+    private String articleTitle;
     /**
-     * 点赞数量
-     */
-    private int favourCount;
-    /**
-     * 评论数
-     */
-    private int commentCount;
-    /**
-     * 是否被收藏
-     */
-    private boolean collect;
-    /**
-     * 收藏数量
-     */
-    private int collectCount;
-    /**
-     * 文章链接
+     * 文章url
      */
     private String articleUrl;
-
     /**
-     * 文章创建时间
+     * 发布时间
      */
-    private Date createTime;
+    private Date postTime;
 
-    private User user;
-
-
-    @Override
-    public String toString() {
-        return "Article{" +
-                "articleId=" + articleId +
-                ", isAdvertorial=" + isAdvertorial +
-                ", authorId=" + authorId +
-                ", isFavoured=" + isFavoured +
-                ", favourCount=" + favourCount +
-                ", commentCount=" + commentCount +
-                ", collect=" + collect +
-                ", collectCount=" + collectCount +
-                ", articleUrl='" + articleUrl + '\'' +
-                ", createTime=" + createTime +
-                ", user=" + user +
-                '}';
-    }
-
-    public int getArticleId() {
+    public Integer getArticleId() {
         return articleId;
     }
 
-    public void setArticleId(int articleId) {
+    public void setArticleId(Integer articleId) {
         this.articleId = articleId;
     }
 
-    public boolean isAdvertorial() {
-        return isAdvertorial;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setAdvertorial(boolean advertorial) {
-        isAdvertorial = advertorial;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
-    public int getAuthorId() {
-        return authorId;
+    public String getArticleTitle() {
+        return articleTitle;
     }
 
-    public void setAuthorId(int authorId) {
-        this.authorId = authorId;
-    }
-
-    public boolean isFavoured() {
-        return isFavoured;
-    }
-
-    public void setFavoured(boolean favoured) {
-        isFavoured = favoured;
-    }
-
-    public int getFavourCount() {
-        return favourCount;
-    }
-
-    public void setFavourCount(int favourCount) {
-        this.favourCount = favourCount;
-    }
-
-    public int getCommentCount() {
-        return commentCount;
-    }
-
-    public void setCommentCount(int commentCount) {
-        this.commentCount = commentCount;
-    }
-
-    public boolean isCollect() {
-        return collect;
-    }
-
-    public void setCollect(boolean collect) {
-        this.collect = collect;
-    }
-
-    public int getCollectCount() {
-        return collectCount;
-    }
-
-    public void setCollectCount(int collectCount) {
-        this.collectCount = collectCount;
+    public void setArticleTitle(String articleTitle) {
+        this.articleTitle = articleTitle;
     }
 
     public String getArticleUrl() {
@@ -142,19 +60,11 @@ public class Article {
         this.articleUrl = articleUrl;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getPostTime() {
+        return postTime;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
+    public void setPostTime(Date postTime) {
+        this.postTime = postTime;
     }
 }

@@ -7,53 +7,53 @@ import java.util.Date;
  * @Description:
  */
 public class User {
-    private int userId;
-    private String userName;
+    /**
+     * 用户id
+     */
+    private Integer userId;
+    /**
+     * 用户昵称
+     */
+    private String username;
+    /**
+     * 注册邮箱
+     */
     private String email;
+    /**
+     * 用户密码
+     */
     private String password;
-    private String userHead;
+    /**
+     * 用户头像
+     */
+    private String headImg;
+    /**
+     * 用户个性签名
+     */
     private String signature;
-    private boolean following;
-
-
-
-
     /**
-     * 粉丝数
+     * 用户性别   0--男   1--女
      */
-    private int fansCount;
-    /**
-     * 收藏数
-     */
-    public int collcetCount;
-    /**
-     * 关注数
-     */
-    private int subscribeCount;
-    /**
-     * 分享的文章数
-     */
-    private int shareCount;
+    private Integer sex;
     /**
      * 注册时间
      */
     private Date singUpTime;
 
-
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
@@ -72,12 +72,12 @@ public class User {
         this.password = password;
     }
 
-    public String getUserHead() {
-        return userHead;
+    public String getHeadImg() {
+        return headImg;
     }
 
-    public void setUserHead(String userHead) {
-        this.userHead = userHead;
+    public void setHeadImg(String headImg) {
+        this.headImg = headImg;
     }
 
     public String getSignature() {
@@ -88,69 +88,11 @@ public class User {
         this.signature = signature;
     }
 
-    public boolean isFollowing() {
-        return following;
+    public Integer getSex() {
+        return sex;
     }
 
-    public void setFollowing(boolean following) {
-        this.following = following;
-    }
-
-    public int getFansCount() {
-        return fansCount;
-    }
-
-    public void setFansCount(int fansCount) {
-        this.fansCount = fansCount;
-    }
-
-    public int getCollcetCount() {
-        return collcetCount;
-    }
-
-    public void setCollcetCount(int collcetCount) {
-        this.collcetCount = collcetCount;
-    }
-
-    public int getSubscribeCount() {
-        return subscribeCount;
-    }
-
-    public void setSubscribeCount(int subscribeCount) {
-        this.subscribeCount = subscribeCount;
-    }
-
-    public int getShareCount() {
-        return shareCount;
-    }
-
-    public void setShareCount(int shareCount) {
-        this.shareCount = shareCount;
-    }
-
-    public Date getSingUpTime() {
-        return singUpTime;
-    }
-
-    public void setSingUpTime(Date singUpTime) {
-        this.singUpTime = singUpTime;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "userId=" + userId +
-                ", userName='" + userName + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", userHead='" + userHead + '\'' +
-                ", signature='" + signature + '\'' +
-                ", following=" + following +
-                ", fansCount=" + fansCount +
-                ", collcetCount=" + collcetCount +
-                ", subscribeCount=" + subscribeCount +
-                ", shareCount=" + shareCount +
-                ", singUpTime=" + singUpTime +
-                '}';
+    public void setSex(Integer sex) {
+        this.sex = sex;
     }
 }
