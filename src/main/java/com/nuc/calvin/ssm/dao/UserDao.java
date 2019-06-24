@@ -9,22 +9,13 @@ import java.util.List;
  * @Description:
  */
 public interface UserDao {
-
-
     /**
-     * 通过id查询单个用户
+     * 通过id删除用户
      *
-     * @param id
+     * @param userId
      * @return
      */
-    User queryById(int id);
-
-    /**
-     * 查询所有用户
-     *
-     * @return
-     */
-    List<User> queryAll();
+    int deleteUserById(Integer userId);
 
     /**
      * 注册用户
@@ -32,26 +23,26 @@ public interface UserDao {
      * @param user
      * @return
      */
-    int addUser(User user);
+    int insertUser(User user);
 
     /**
-     * 更新用户信息
+     * 通过id查询用户
      *
+     * @param userId
+     * @return
+     */
+    User queryUserById(int userId);
+
+    /**
+     * 查询所有用户
+     * @return
+     */
+    List<User> queryUserAll();
+
+    /**
+     * 修改用户信息
      * @param user
      * @return
      */
     int updateUser(User user);
-
-    /**
-     * 删除用户
-     *
-     * @param id
-     * @return
-     */
-    int deleteUser(int id);
-
-    /**
-     * 用户登录
-     */
-    User userLogin(User user);
 }

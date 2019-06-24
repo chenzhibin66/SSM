@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nuc.calvin.ssm.dao.UserCustomDao">
+    <resultMap id="UserResultMap" type="com.nuc.calvin.ssm.entity.UserCustom">
+        <id column="userId" property="userId" jdbcType="INTEGER"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="signature" property="signature" jdbcType="VARCHAR"/>
+        <result column="sex" property="sex" jdbcType="INTEGER"/>
+        <result column="headImg" property="headImg" jdbcType="VARCHAR"/>
+        <result column="singUpTime" property="singUpTime" jdbcType="DATE"/>
+
+        <!--一对一关系-->
+        <association property="relation" javaType="com.nuc.calvin.ssm.entity.Relation">
+            <id column="relation_id" property="relationId" jdbcType="INTEGER"/>
+            <result column="user_id" property="userId" jdbcType="INTEGER"/>
+            <result column="follow_id" property="followId" jdbcType="INTEGER"/>
+            <result column="state" property="state" jdbcType="INTEGER"/>
+        </association>
+    </resultMap>
+
+    <!-- sql片段 -->
+    <sql id="query_user_where">
+        <if test="userCustom!=null">
+            <if test="userCustom.email!=null and userCustom.email!=''">
+                and email='${userCustom.email}'
+            </if>
+        </if>
+        <if test="userCustom!=null">
+            <if test="userCustom.password!=null and userCustom.password=''">
+                and password='${userCustom.password}'
+            </if>
+        </if>
+    </sql>
+
+    <!-- 修改用户密码 -->
+    <update id="updatePassword" parameterType="com.nuc.calvin.ssm.entity.User">
+    update user set password=#{password,jdbcType=VARCHAR} where userId=#{userId,jdbcType=INTEGER}
+</update>
+
+    <!-- 插入新用户 -->
+    <insert id="insertUser" parameterType="com.nuc.calvin.ssm.entity.User" keyProperty="userId" useGeneratedKeys="true">
+        insert into user(username,email,password,headImg,signature,sex,singUpTime)
+        values (#{username,jdbcType=VARCHAR} ,#{email,jdbcType=VARCHAR} ,#{password,jdbcType=VARCHAR}
+        ,#{headImg,jdbcType=VARCHAR} ,#{signature,jdbcType=VARCHAR} ,#{sex,jdbcType=INTEGER} ,#{singUpTime} )
+    </insert>
+    <!-- 登录验证 -->
+    <select id="loginVerify" parameterType="com.nuc.calvin.ssm.entity.UserVo" resultMap="UserResultMap">
+        select * from user
+        <where>
+            <include refid="query_user_where"></include>
+        </where>
+    </select>
+
+    <!-- 根据用户id查询用户信息 -->
+    <select id="queryInfoByUserId" parameterType="int" resultType="com.nuc.calvin.ssm.entity.UserCustom">
+        select * from user
+        <where>
+            and user.userId=#{id}
+        </where>
+    </select>
+
+    <!-- 修改用户id为userId的用户信息 -->
+    <select id="updateByUserId" parameterType="com.nuc.calvin.ssm.entity.UserVo">
+        update user set
+        username=#{userCustom.username,jdbcType=VARCHAR},
+        email=#{userCustom.email,jdbcType=VARCHAR} ,
+        password=#{userCustom.password,jdbcType=VARCHAR},
+        headImg=#{userCustom.headImg,jdbcType=VARCHAR} ,
+        signature=#{userCustom.signature,jdbcType=VARCHAR} ,
+        sex=#{userCustom.sex,jdbcType=INTEGER}
+    </select>
+
+    <!-- 文章数 -->
+    <select id="queryArticleCount" parameterType="int" resultType="int">
+        select count(*)
+        from article
+        where article.userId=#{id}
+    </select>
+
+    <!-- 粉丝数 -->
+    <select id="queryFansCount" parameterType="int" resultType="int">
+        select count(*)
+        from relation
+        where followId=#{userId,jdbcType=INTEGER}
+    </select>
+
+    <!-- 关注数 -->
+    <select id="queryFollowCount" parameterType="int" resultType="int">
+        select count(*)
+        from relation
+        where userId=#{userId,jdbcType=INTEGER}
+    </select>
+
+    <!--查询关注列表-->
+    <select id="queryFollowList" parameterType="int" resultMap="UserResultMap">
+        select b.*,a.state
+        from relation as a,user as b
+        where a.userId=#{userId,jdbcType=INTEGER}
+        and a.followId=b.userId
+    </select>
+
+    <!--查询粉丝列表-->
+    <select id="queryFansList" parameterType="int" resultMap="UserResultMap">
+        select a.*,b.*
+        from relation as a,user as b
+        where a.followId=#{userId,jdbcType=INTEGER}
+        and b.userId=a.userId
+    </select>
+
+    <!-- 模糊查询-->
+    <select id="queryUserByWord" parameterType="String" resultMap="UserResultMap">
+    select * from user where user.username like '%{keyWord,jdbcType=VARCHAR} %'
+</select>
+</mapper>

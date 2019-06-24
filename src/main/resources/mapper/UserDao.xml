@@ -3,56 +3,51 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.nuc.calvin.ssm.dao.UserDao">
-    <insert id="addUser" useGeneratedKeys="true">
-          INSERT into user (userName,email,password,userHead,
-          signature,following,fansCount,subscribeCount,shareCount,singUpTime)
-          values (#{userName} ,#{email} ,#{password} ,#{userHead}
-          ,#{signature},#{following},#{fansCount} ,#{subscribeCount}
-            ,#{shareCount} ,#{singUpTime}  )
-    </insert>
-    <select id="queryById" resultType="com.nuc.calvin.ssm.entity.User">
-    select
-            userId,
-            userName,
-            email,
-            fansCount,
-            subscribeCount,
-            shareCount,
-            singUpTime
-    from
-            user
-            where userId=#{id}
-            order by
-            userId desc
-</select>
+    <resultMap id="BaseResultMap" type="com.nuc.calvin.ssm.entity.User">
+        <id column="user_id" property="userId" jdbcType="INTEGER"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="signature" property="signature" jdbcType="VARCHAR"/>
+        <result column="sex" property="sex" jdbcType="INTEGER"/>
+        <result column="head_img" property="headImg" jdbcType="VARCHAR"/>
+        <result column="sing_up_time" property="singUpTime" jdbcType="DATE"/>
+    </resultMap>
 
-    <select id="queryAll" resultType="com.nuc.calvin.ssm.entity.User">
+    <!--根据id查询用户-->
+    <select id="queryUserById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select * from user where user_id=#{userId}
+    </select>
+
+    <!--查询所有用户-->
+    <select id="queryUserAll" resultMap="BaseResultMap">
         select * from user
     </select>
 
+    <!-- 根据id删除用户-->
+    <delete id="deleteUserById" parameterType="com.nuc.calvin.ssm.entity.User">
+        delete from user where user_id =#{userId,jdbcType=INTEGER}
+    </delete>
+
+    <!--根据id更新用户数据-->
     <update id="updateUser" parameterType="com.nuc.calvin.ssm.entity.User">
         update user
         <set>
-            <if test="email != null">email=#{email}</if>
-            <if test="userName != null">userName=#{userName}</if>
-            <if test="password != null">password=#{password}</if>
-            <if test="signature != null">signature=#{signature}</if>
-            <if test="fansCount != null">fansCount=#{fansCount}</if>
-            <if test="subscribeCount != null">subscribeCount=#{subscribeCount}</if>
+            <if test="username != null">username=#{username,jdbcType=VARCHAR}</if>
+            <if test="email != null">email=#{email,jdbcType=VARCHAR}</if>
+            <if test="password != null">email=#{password,jdbcType=VARCHAR}</if>
+            <if test="signature != null">signature=#{signature,jdbcType=VARCHAR}</if>
+            <if test="headImg != null">headImg=#{headImg,jdbcType=VARCHAR}</if>
+            <if test="sex != null">sex=#{sex,jdbcType=INTEGER}</if>
         </set>
+        where user_id=#{userId,jdbcType=INTEGER}
     </update>
 
-    <delete id="deleteUser" parameterType="com.nuc.calvin.ssm.entity.User">
-        delete  from user where userId=#{id}
-    </delete>
-
-
-    <resultMap id="UserDaoResultMap" type="com.nuc.calvin.ssm.entity.User">
-        <id column="user_id" property="userId" jdbcType="INTEGER"/>
-        <result column="user_name" property="userName" jdbcType="VARCHAR"/>
-        <result column="password" property="password" jdbcType="VARCHAR"/>
-    </resultMap>
-    <select id="userLogin" parameterType="com.nuc.calvin.ssm.entity.User" resultMap="UserDaoResultMap">
-        select * from user where userName =#{userName,jdbcType=VARCHAR} and password =#{password,jdbcType=VARCHAR}
-    </select>
+    <!-- 插入用户数据-->
+    <insert id="insertUser" useGeneratedKeys="true" keyColumn="user_id" keyProperty="userId"
+            parameterType="com.nuc.calvin.ssm.entity.User">
+        insert into user(username,email,password,headImg,signature,sex,singUpTime)
+        values (#{username,jdbcType=VARCHAR} ,#{email,jdbcType=VARCHAR} ,#{password,jdbcType=VARCHAR}
+        ,#{headImg,jdbcType=VARCHAR} ,#{signature,jdbcType=VARCHAR} ,#{singUpTime-} )
+    </insert>
 </mapper>
