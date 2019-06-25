@@ -4,7 +4,7 @@ package com.nuc.calvin.ssm.entity;
  * @author Calvin
  * @Description:
  */
-public class ReplyCustom {
+public class ReplyCustom extends Reply {
     /**
      * from 昵称
      */

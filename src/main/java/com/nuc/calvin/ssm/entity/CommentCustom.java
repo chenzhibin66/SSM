@@ -6,9 +6,9 @@ import java.util.List;
  * @author Calvin
  * @Description:
  */
-public class CommentCustom {
+public class CommentCustom extends Comment {
     private User user;
-
+    private Article article;
     /**
      * 被评论文章作者昵称
      */
@@ -26,6 +26,14 @@ public class CommentCustom {
      * 回复列表
      */
     private List<Reply> replyList;
+
+    public Article getArticle() {
+        return article;
+    }
+
+    public void setArticle(Article article) {
+        this.article = article;
+    }
 
     public User getUser() {
         return user;

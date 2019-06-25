@@ -4,7 +4,7 @@ package com.nuc.calvin.ssm.entity;
  * @author Calvin
  * @Description:
  */
-public class RelationCustom {
+public class RelationCustom extends Relation {
 
     private UserCustom user;
 

@@ -23,11 +23,16 @@ public class Comment {
      * 评论内容
      */
     private String commentContent;
-    /**
-     * 评论时间
-     */
     private Date commentTime;
 
+
+    public Date getCommentTime() {
+        return commentTime;
+    }
+
+    public void setCommentTime(Date commentTime) {
+        this.commentTime = commentTime;
+    }
 
     public Integer getCommentId() {
         return commentId;
@@ -59,14 +64,6 @@ public class Comment {
 
     public void setCommentContent(String commentContent) {
         this.commentContent = commentContent;
-    }
-
-    public Date getCommentTime() {
-        return commentTime;
-    }
-
-    public void setCommentTime(Date commentTime) {
-        this.commentTime = commentTime;
     }
 }
 
