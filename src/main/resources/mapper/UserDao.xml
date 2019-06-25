@@ -20,7 +20,7 @@
     </select>
 
     <!--查询所有用户-->
-    <select id="queryUserAll" resultMap="BaseResultMap">
+    <select id="queryUserAll" resultMap="BaseResultMap" parameterType="com.nuc.calvin.ssm.entity.User">
         select * from user
     </select>
 

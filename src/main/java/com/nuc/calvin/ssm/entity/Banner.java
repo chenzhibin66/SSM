@@ -8,11 +8,11 @@ public class Banner {
     /**
      * 广告id
      */
-    private int bannerId;
+    private Integer bannerId;
     /**
      * 文章id
      */
-    private int articleId;
+    private Integer articleId;
     /**
      * 广告标题
      */
@@ -22,10 +22,7 @@ public class Banner {
      */
     private String bannerImage;
 
-    /**
-     * 广告所属的文章   一对一关系
-     */
-    private Article article;
+
 
     public int getBannerId() {
         return bannerId;
@@ -59,11 +56,4 @@ public class Banner {
         this.bannerImage = bannerImage;
     }
 
-    public Article getArticle() {
-        return article;
-    }
-
-    public void setArticle(Article article) {
-        this.article = article;
-    }
 }
