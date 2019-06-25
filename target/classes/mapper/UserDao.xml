@@ -4,29 +4,29 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.nuc.calvin.ssm.dao.UserDao">
     <resultMap id="BaseResultMap" type="com.nuc.calvin.ssm.entity.User">
-        <id column="user_id" property="userId" jdbcType="INTEGER"/>
+        <id column="userId" property="userId" jdbcType="INTEGER"/>
         <result column="username" property="username" jdbcType="VARCHAR"/>
         <result column="password" property="password" jdbcType="VARCHAR"/>
         <result column="email" property="email" jdbcType="VARCHAR"/>
         <result column="signature" property="signature" jdbcType="VARCHAR"/>
         <result column="sex" property="sex" jdbcType="INTEGER"/>
-        <result column="head_img" property="headImg" jdbcType="VARCHAR"/>
-        <result column="sing_up_time" property="singUpTime" jdbcType="DATE"/>
+        <result column="headImg" property="headImg" jdbcType="VARCHAR"/>
+        <result column="singUpTime" property="singUpTime" jdbcType="DATE"/>
     </resultMap>
 
     <!--根据id查询用户-->
-    <select id="QueryUserById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
-        select * from user where user_id=#{userId}
+    <select id="queryUserById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select * from user where userId=#{userId}
     </select>
 
     <!--查询所有用户-->
-    <select id="QueryUserAll" resultMap="BaseResultMap">
+    <select id="queryUserAll" resultMap="BaseResultMap" parameterType="com.nuc.calvin.ssm.entity.User">
         select * from user
     </select>
 
     <!-- 根据id删除用户-->
     <delete id="deleteUserById" parameterType="com.nuc.calvin.ssm.entity.User">
-        delete from user where user_id =#{userId,jdbcType=INTEGER}
+        delete from user where userId =#{userId,jdbcType=INTEGER}
     </delete>
 
     <!--根据id更新用户数据-->
@@ -40,7 +40,7 @@
             <if test="headImg != null">headImg=#{headImg,jdbcType=VARCHAR}</if>
             <if test="sex != null">sex=#{sex,jdbcType=INTEGER}</if>
         </set>
-        where user_id=#{userId,jdbcType=INTEGER}
+        where userId=#{userId,jdbcType=INTEGER}
     </update>
 
     <!-- 插入用户数据-->

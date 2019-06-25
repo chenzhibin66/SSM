@@ -4,16 +4,22 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.nuc.calvin.ssm.dao.BannerDao">
 
-    <select id="queryBannerById" resultType="com.nuc.calvin.ssm.entity.Banner" parameterType="int">
-        select * from banner where bannerId =#{bannerId}
+    <resultMap id="BaseResultMap" type="com.nuc.calvin.ssm.entity.Banner">
+        <id column="banner_id" property="bannerId" jdbcType="INTEGER"/>
+        <result column="article_id" property="articleId" jdbcType="INTEGER"/>
+        <result column="banner_title" property="bannerTitle" jdbcType="VARCHAR"/>
+        <result column="banner_image" property="bannerImage" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="queryBannerById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select * from banner where banner_id=#{bannerId}
     </select>
 
-    <select id="queryBanner" resultType="com.nuc.calvin.ssm.entity.Banner">
+    <select id="queryBanner" resultMap="BaseResultMap">
         select * from banner
     </select>
 
     <insert id="insertBanner" useGeneratedKeys="true" parameterType="com.nuc.calvin.ssm.entity.Banner">
-        insert into banner(bannerImage) values (#{bannerImage,jdbcType=VARCHAR} )
+        insert into banner(bannerTitle,bannerImage) values (#{bannerImage,jdbcType=VARCHAR} )
     </insert>
 
     <update id="updateBanner" parameterType="com.nuc.calvin.ssm.entity.Banner">

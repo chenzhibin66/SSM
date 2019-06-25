@@ -5,10 +5,10 @@
 <mapper namespace="com.nuc.calvin.ssm.dao.ArticleDao">
     <resultMap id="BaseResultMap" type="com.nuc.calvin.ssm.entity.Article">
         <id column="article_id" property="articleId" jdbcType="INTEGER"/>
-        <id column="user_id" property="userId" jdbcType="INTEGER"/>
-        <id column="article_title" property="articleTitle" jdbcType="VARCHAR"/>
-        <id column="article_url" property="articleUrl" jdbcType="VARCHAR"/>
-        <id column="post_time" property="postTime" jdbcType="DATE"/>
+        <result column="user_id" property="userId" jdbcType="INTEGER"/>
+        <result column="article_title" property="articleTitle" jdbcType="VARCHAR"/>
+        <result column="article_url" property="articleUrl" jdbcType="VARCHAR"/>
+        <result column="post_time" property="postTime" jdbcType="DATE"/>
     </resultMap>
 
     <!--插入文章-->

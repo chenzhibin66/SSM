@@ -59,13 +59,6 @@ public interface UserService {
      */
     int queryFansCount(Integer userId);
 
-    /**
-     * 根据username查找用户
-     *
-     * @param username
-     * @return
-     */
-    List<UserCustom> queryByUsername(String username);
 
     /**
      * 注册用户

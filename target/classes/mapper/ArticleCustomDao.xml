@@ -4,7 +4,110 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.nuc.calvin.ssm.dao.ArticleCustomDao">
     <resultMap id="ArticleResultMap" type="com.nuc.calvin.ssm.entity.ArticleCustom">
-        <id column=""
+        <id column="article_id" property="articleId" jdbcType="INTEGER"/>
+        <id column="user_id" property="userId" jdbcType="INTEGER"/>
+        <id column="article_title" property="articleTitle" jdbcType="VARCHAR"/>
+        <id column="article_url" property="articleUrl" jdbcType="VARCHAR"/>
+        <id column="post_time" property="postTime" jdbcType="TIMESTAMP"/>
+
+        <!-- 一对一关系-->
+        <association property="user" javaType="com.nuc.calvin.ssm.entity.User">
+            <id column="user_id" property="userId" jdbcType="INTEGER"/>
+            <result column="username" property="username" jdbcType="VARCHAR"/>
+            <result column="password" property="password" jdbcType="VARCHAR"/>
+            <result column="email" property="email" jdbcType="VARCHAR"/>
+            <result column="signature" property="signature" jdbcType="VARCHAR"/>
+            <result column="sex" property="sex" jdbcType="INTEGER"/>
+            <result column="head_img" property="headImg" jdbcType="VARCHAR"/>
+            <result column="sing_up_time" property="singUpTime" jdbcType="DATE"/>
+        </association>
     </resultMap>
 
+    <!-- 根据文章id查询微博 -->
+    <select id="queryArticleByArticleId" parameterType="int" resultMap="ArticleResultMap">
+        select * from article,user where article.article_id=#{articleId,jdbcType=INTEGER}
+        and user.user_id=article.user_id
+    </select>
+
+    <!-- 根据微博id删除微博 -->
+    <delete id="deleteByArticleId" parameterType="int">
+        delete from article where article_id=#{articleId,jdbcType=INTEGER}
+    </delete>
+
+    <!-- 根据用户id查询微博 附加user昵称 头像 -->
+    <select id="queryArticleByUserId" parameterType="Integer" resultMap="ArticleResultMap">
+        select
+        user.username,user.head_img,article.* from article,user
+        <where>
+            and article.user_id=#{userId,jdbcType=INTEGER}
+            and article.user_id=user.user_id order by post_time desc
+        </where>
+    </select>
+
+    <!-- 发文章 -->
+    <insert id="postArticle" parameterType="com.nuc.calvin.ssm.entity.ArticleVo" keyProperty="articleId"
+            useGeneratedKeys="true">
+        insert into article
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="articleCustom.userId != null">
+                user_id
+            </if>
+            <if test="articleCustom.articleTitle != null">
+                article_title
+            </if>
+            <if test="articleCustom.articleUrl != null">
+                article_url
+            </if>
+            <if test="articleCustom.postTime != null">
+                post_time
+            </if>
+        </trim>
+        <trim prefix="values(" suffix=")" suffixOverrides=",">
+            <if test="articleCustom.userId != null">
+                #{articleCustom.userId,jdbcType=INTEGER}
+            </if>
+            <if test="articleCustom.articleTitle != null">
+                #{articleCustom.articleTitle,jdbcType=VARCHAR}
+            </if>
+            <if test="articleCustom.articleUrl != null">
+                #{articleCustom.articleUrl,jdbcType=VARCHAR}
+            </if>
+            <if test="articleCustom.postTime != null">
+                #{articleCustom.postTime,jdbcType=TIMESTAMP}
+            </if>
+        </trim>
+    </insert>
+
+    <!--查询微博被评论次数-->
+    <select id="queryCommentCount" parameterType="int" resultType="int">
+        select count(*)
+        from comment
+        where comment.article_id=#{articleId,jdbcType=INTEGER}
+    </select>
+
+    <!--查询微博被回复次数-->
+    <select id="queryReplyCount" parameterType="int" resultType="int">
+        select count(*)
+        from reply as r
+        where r.comment_id in(
+        select comment_id
+        from comment
+        where comment.article_id=#{articleId,jdbcType=INTEGER}
+        )
+    </select>
+
+    <!--查询文章被点赞次数-->
+    <select id="queryLikeCount" parameterType="int" resultType="int">
+        select count(*)
+        form likes
+        where article_id=#{articleId,jdbcType=INTEGER}
+    </select>
+
+    <!-- 根据关键字搜索微博 -->
+    <select id="queryArticleByWord" parameterType="String" resultMap="ArticleResultMap">
+	select user.username,user.head_img,article.*
+	from article,user
+	where article.article_title like '%${keyWord,jdbcType=VARCHAR}%'
+	and article.user_id=user.user_id order by post_time desc
+	</select>
 </mapper>

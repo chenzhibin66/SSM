@@ -13,6 +13,7 @@ public class CommentCustom extends Comment {
      * 被评论文章作者昵称
      */
     private String username;
+
     /**
      * json评论时间
      */

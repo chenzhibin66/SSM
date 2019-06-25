@@ -1,5 +1,6 @@
 package com.nuc.calvin.ssm.service.impl;
 
+import com.nuc.calvin.ssm.dao.UserCustomDao;
 import com.nuc.calvin.ssm.entity.User;
 import com.nuc.calvin.ssm.entity.UserCustom;
 import com.nuc.calvin.ssm.entity.UserVo;
@@ -18,65 +19,65 @@ import java.util.List;
 @Service("userService")
 public class UserServiceImpl implements UserService {
 
-
+    @Autowired
+    private UserCustomDao userCustomDao;
 
     @Override
     public List<UserCustom> doUserLogin(UserVo userVo) {
-        return null;
+        return userCustomDao.loginVerify(userVo);
     }
 
     @Override
     public List<UserCustom> queryInfoByUserId(int id) {
-        return null;
+
+        return userCustomDao.queryInfoByUserId(id);
     }
 
     @Override
     public void updateUserInfo(UserVo userVo) {
-
+        userCustomDao.updateByUserId(userVo);
     }
 
     @Override
     public int queryArticleCount(Integer userId) {
-        return 0;
+        return userCustomDao.queryArticleCount(userId);
     }
 
     @Override
     public int queryFollowCount(Integer userId) {
-        return 0;
+        return userCustomDao.queryFollowCount(userId);
     }
 
     @Override
     public int queryFansCount(Integer userId) {
-        return 0;
+        return userCustomDao.queryFansCount(userId);
     }
 
-    @Override
-    public List<UserCustom> queryByUsername(String username) {
-        return null;
-    }
 
     @Override
     public void singUpUser(User user) {
-
+        userCustomDao.insertUser(user);
     }
 
     @Override
     public List<UserCustom> queryFollowList(Integer userId) {
-        return null;
+
+        return userCustomDao.queryFollowList(userId);
     }
 
     @Override
     public List<UserCustom> queryFansList(Integer userId) {
-        return null;
+        return userCustomDao.queryFansList(userId);
     }
 
     @Override
     public void updatePassword(User user) {
-
+        userCustomDao.updatePassword(user);
     }
 
     @Override
     public List<UserCustom> queryUserByWord(String keyWord) {
-        return null;
+
+        return userCustomDao.queryUserByWord(keyWord);
     }
 }

@@ -5,10 +5,10 @@
 <mapper namespace="com.nuc.calvin.ssm.dao.ArticleDao">
     <resultMap id="BaseResultMap" type="com.nuc.calvin.ssm.entity.Article">
         <id column="article_id" property="articleId" jdbcType="INTEGER"/>
-        <id column="user_id" property="userId" jdbcType="INTEGER"/>
-        <id column="article_title" property="articleTitle" jdbcType="VARCHAR"/>
-        <id column="article_url" property="articleUrl" jdbcType="VARCHAR"/>
-        <id column="post_time" property="postTime" jdbcType="DATE"/>
+        <result column="user_id" property="userId" jdbcType="INTEGER"/>
+        <result column="article_title" property="articleTitle" jdbcType="VARCHAR"/>
+        <result column="article_url" property="articleUrl" jdbcType="VARCHAR"/>
+        <result column="post_time" property="postTime" jdbcType="DATE"/>
     </resultMap>
 
     <!--插入文章-->
@@ -24,7 +24,23 @@
         delete from article where article_id=#{articleId,jdbcType=INTEGER}
     </delete>
 
+    <!-- 根据文章id更新文章-->
     <update id="updateArticleById" parameterType="com.nuc.calvin.ssm.entity.Article">
-
+        update article set
+        user_id=#{userId,jdbcType=INTEGER} ,
+        article_title=#{articleTitle,jdbcType=VARCHAR} ,
+        article_url=#{articleUrl,jdbcType=VARCHAR}
+        where article_id=#{articleId,jdbcType=INTEGER}
     </update>
+
+    <!--根据id查文章-->
+    <select id="queryArticleById" parameterType="com.nuc.calvin.ssm.entity.Article">
+        select * from article where article_id=#{articleId,jdbcType=INTEGER}
+    </select>
+
+    <!-- 查询所有文章-->
+    <select id="queryAllArticle" resultMap="BaseResultMap">
+        select * from article
+    </select>
+
 </mapper>
