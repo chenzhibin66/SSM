@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nuc.calvin.ssm.dao.CommentCustomDao">
+    <resultMap id="CommentResultMap" type="com.nuc.calvin.ssm.entity.CommentCustom">
+        <id column="comment_id" property="commentId" jdbcType="INTEGER"/>
+        <result column="user_id" property="userId" jdbcType="INTEGER"/>
+        <result column="article_id" property="articleId" jdbcType="INTEGER"/>
+        <result column="comment_content" property="commentContent" jdbcType="VARCHAR"/>
+        <result column="comment_time" property="commentTime" jdbcType="TIMESTAMP"/>
+        <result column="username" property="user.username"/>
+
+        <association property="user" javaType="com.nuc.calvin.ssm.entity.User">
+            <id column="user_id" property="userId" jdbcType="INTEGER"/>
+            <result column="username" property="username" jdbcType="VARCHAR"/>
+            <result column="password" property="password" jdbcType="VARCHAR"/>
+            <result column="email" property="email" jdbcType="VARCHAR"/>
+            <result column="signature" property="signature" jdbcType="VARCHAR"/>
+            <result column="sex" property="sex" jdbcType="INTEGER"/>
+            <result column="head_img" property="headImg" jdbcType="VARCHAR"/>
+            <result column="sing_up_time" property="singUpTime" jdbcType="DATE"/>
+        </association>
+
+        <association property="article" javaType="com.nuc.calvin.ssm.entity.Article">
+            <id column="article_id" property="articleId" jdbcType="INTEGER"/>
+            <result column="user_id" property="userId" jdbcType="INTEGER"/>
+            <result column="article_title" property="articleTitle" jdbcType="VARCHAR"/>
+            <result column="article_url" property="articleUrl" jdbcType="VARCHAR"/>
+            <result column="post_time" property="postTime" jdbcType="DATE"/>
+        </association>
+    </resultMap>
+
+    <!--添加评论-->
+    <insert id="addComment" parameterType="com.nuc.calvin.ssm.entity.CommentCustom" keyProperty="commentId"
+            useGeneratedKeys="true">
+        insert into comment (user_id,article_id,comment_content,comment_time)
+        values (#{userId,jdbcType=INTEGER}  ,#{articleId,jdbcType=INTEGER} ,#{commentContent,jdbcType=VARCHAR} ,#{commentTime,jdbcType=TIMESTAMP} );
+    </insert>
+
+    <!-- 查询微博Id的评论 -->
+    <select id="queryComment" parameterType="int" resultMap="CommentResultMap">
+        select b.user_id,a.head_img,b.comment_id,a.head_img,b.comment_content
+        ,b.comment_time,a.username
+        from user as a,comment as b
+        where a.user_id=b.user_id and b.article_id=#{articleId}
+    </select>
+
+    <!--查询评论回复数-->
+    <select id="queryCountReply" parameterType="int" resultType="int">
+        select count(*) from reply as a where a.comment_id=#{commentId,jdbcType=INTEGER}
+    </select>
+
+    <!--删除评论-->
+    <delete id="deleteCommentById" parameterType="int">
+        delete from comment where comment_id=#{commentId}
+    </delete>
+
+    <!-- 根据userID查询评论列表 -->
+    <select id="queryCommentByUserId" parameterType="int" resultMap="CommentResultMap">
+        select u.username,u.head_img,c.*,w.user_id,wu.username,w.post_time,w.article_url
+        from comment as c,user as u,article as w,user as wu
+        where u.user_id=c.user_id
+        and w.article_id=c.article_id
+        and wu.user_id=w.user_id
+        and w.user_id=#{userId,jdbcType=INTEGER}
+        order by comment_time desc
+    </select>
+</mapper>

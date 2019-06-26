@@ -43,9 +43,8 @@
 
     <!-- 插入新用户 -->
     <insert id="insertUser" parameterType="com.nuc.calvin.ssm.entity.User" keyProperty="userId" useGeneratedKeys="true">
-        insert into user(username,email,password,headImg,signature,sex,singUpTime)
-        values (#{username,jdbcType=VARCHAR} ,#{email,jdbcType=VARCHAR} ,#{password,jdbcType=VARCHAR}
-        ,#{headImg,jdbcType=VARCHAR} ,#{signature,jdbcType=VARCHAR} ,#{sex,jdbcType=INTEGER} ,#{singUpTime} )
+        insert into user(username,email,password,singUpTime)
+        values (#{username,jdbcType=VARCHAR} ,#{email,jdbcType=VARCHAR} ,#{password,jdbcType=VARCHAR} ,#{singUpTime,jdbcType=TIMESTAMP}  )
     </insert>
     <!-- 登录验证 -->
     <select id="loginVerify" parameterType="com.nuc.calvin.ssm.entity.UserVo" resultMap="UserResultMap">
@@ -115,4 +114,9 @@
     <select id="queryUserByWord" parameterType="String" resultMap="UserResultMap">
     select * from user where user.username like '%{keyWord,jdbcType=VARCHAR} %'
 </select>
+
+
+    <select id="getEmail" parameterType="String" resultMap="UserResultMap">
+        select * from user where email=#{email,jdbcType=VARCHAR}
+    </select>
 </mapper>

@@ -29,4 +29,6 @@ public class UserDaoTest extends BaseTest {
         User user=userDao.queryUserById(1);
         System.out.println(user.toString());
     }
+
+
 }

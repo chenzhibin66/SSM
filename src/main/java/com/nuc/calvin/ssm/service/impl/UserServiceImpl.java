@@ -80,4 +80,9 @@ public class UserServiceImpl implements UserService {
 
         return userCustomDao.queryUserByWord(keyWord);
     }
+
+    @Override
+    public UserCustom getEmail(String email) {
+        return userCustomDao.getEmail(email);
+    }
 }

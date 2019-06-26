@@ -7,33 +7,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fdd5bf5-f7e2-4216-8a55-b22da8bc8f40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/UserExecution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/com/nuc/calvin/ssm/dao/UserDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/LoginOk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/Ok.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/param/RegisterParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/com/nuc/calvin/ssm/dao/UserCustomDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/CommentCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/CommentCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/UserCustomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/UserCustomDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/Result.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CommentCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CommentCustom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/dao/ArticleCustomDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/dao/ArticleCustomDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/dao/ArticleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/dao/ArticleDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/dao/CommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/dao/CommentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/entity/Banner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/entity/Banner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/entity/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/entity/CommentCustom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/entity/CommentCustom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/entity/ReplyCustom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/entity/ReplyCustom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserCustomDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserCustomDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/nuc/calvin/ssm/dao/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/nuc/calvin/ssm/dao/UserDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/dao/UserCustomDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/dao/UserCustomDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/dto/Result.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ArticleCustomDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ArticleCustomDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ArticleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ArticleDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/BannerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/BannerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserCustomDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserCustomDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-service.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/dao/ArticleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/dao/ArticleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/dao/CommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/dao/CommentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/dao/FavourDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/entity/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/entity/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/entity/Banner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/entity/Banner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/entity/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/entity/Favour.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/superadmin/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/mapper/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/mapper/UserDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/spring/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/spring/spring-service.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,44 +59,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="99" column="18" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-179">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="251">
+              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#620#621#0" expanded="true" />
+                <element signature="e#653#654#0" expanded="true" />
+                <element signature="e#703#704#0" expanded="true" />
+                <element signature="e#747#748#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state relative-caret-position="-315">
+              <caret line="41" column="64" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,19 +87,47 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/UserExecution.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+            <state relative-caret-position="121">
+              <caret line="147" column="17" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/com/nuc/calvin/ssm/dao/UserDaoTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/LoginOk.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+            <state relative-caret-position="99">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="591">
+              <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserCustomDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/com/nuc/calvin/ssm/dao/UserCustomDaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,38 +138,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+            <state relative-caret-position="312">
+              <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/UserCustomDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
+            <state relative-caret-position="-951">
+              <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-service.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="270">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2576">
-              <caret line="133" column="28" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="28" />
-            </state>
-          </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
         </entry>
       </file>
     </leaf>
@@ -161,16 +175,18 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>wangtianrui</find>
+      <find>wang</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/ArticleCustom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/Collect.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/CollectCustom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/UserCustom.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/Relation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/Reply.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/Likes.java" />
@@ -178,12 +194,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/UserExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/UserVo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/UserCustomDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserCustomDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/UserCustomDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/ArticleVo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/ArticleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/ArticleDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/ArticleCustomDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ArticleCustomDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/ArticleService.java" />
@@ -207,17 +220,24 @@
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/CommentCustom.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CommentCustom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/UserExecution.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" />
+        <option value="$PROJECT_DIR$/src/test/com/nuc/calvin/ssm/dao/UserDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/Result.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/loginOk.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/process/UserAccountProcess.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/Result.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/UserExecution.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/test/com/nuc/calvin/ssm/dao/UserDaoTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/Ok.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/param/RegisterParam.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/process/UserAccountProcess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/test/com/nuc/calvin/ssm/dao/UserCustomDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserCustomDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/UserCustomDao.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/UserController.java" />
       </list>
     </option>
   </component>
@@ -246,10 +266,10 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1911" />
-    <option name="y" value="51" />
-    <option name="width" value="1698" />
-    <option name="height" value="1018" />
+    <option name="x" value="-183" />
+    <option name="y" value="58" />
+    <option name="width" value="1700" />
+    <option name="height" value="1020" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -345,6 +365,18 @@
               <item name="nuc" type="462c0819:PsiDirectoryNode" />
               <item name="calvin" type="462c0819:PsiDirectoryNode" />
               <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="headline" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="nuc" type="462c0819:PsiDirectoryNode" />
+              <item name="calvin" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -358,6 +390,18 @@
               <item name="calvin" type="462c0819:PsiDirectoryNode" />
               <item name="ssm" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="headline" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="nuc" type="462c0819:PsiDirectoryNode" />
+              <item name="calvin" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="headline" type="b2602c69:ProjectViewProjectNode" />
@@ -453,14 +497,14 @@
     <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ideaworkspace\headline\src\main\webapp" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ideaworkspace\headline\src\main\resources\mapper" />
       <recent name="D:\ideaworkspace\headline\src\main\java\com\nuc\calvin\ssm\dao" />
       <recent name="D:\ideaworkspace\headline\src\main\resources\sql" />
       <recent name="D:\ideaworkspace\headline\src\main\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ideaworkspace\headline\src\main\webapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -475,7 +519,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserDaoTest.query1">
+  <component name="RunManager" selected="Tomcat Server.czb">
     <configuration name="ArticleDaoTest.queryArticle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="headline" />
       <extension name="coverage">
@@ -508,7 +552,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArticleDaoTest.testInsertArticle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserCustomDaoTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="headline" />
       <extension name="coverage">
         <pattern>
@@ -517,8 +561,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.nuc.calvin.ssm.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.nuc.calvin.ssm.dao.ArticleDaoTest" />
-      <option name="METHOD_NAME" value="testInsertArticle" />
+      <option name="MAIN_CLASS_NAME" value="com.nuc.calvin.ssm.dao.UserCustomDaoTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -630,20 +674,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ArticleDaoTest.testInsertArticle" />
       <item itemvalue="JUnit.ArticleDaoTest.queryArticle" />
       <item itemvalue="JUnit.ArticleDaoTest.testDeleteArticle" />
-      <item itemvalue="Tomcat Server.czb" />
       <item itemvalue="JUnit.UserDaoTest.query" />
       <item itemvalue="JUnit.UserDaoTest.query1" />
+      <item itemvalue="JUnit.UserCustomDaoTest.test" />
+      <item itemvalue="Tomcat Server.czb" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserDaoTest.query1" />
+        <item itemvalue="JUnit.UserCustomDaoTest.test" />
         <item itemvalue="JUnit.UserDaoTest.query" />
+        <item itemvalue="JUnit.UserDaoTest.query1" />
         <item itemvalue="JUnit.ArticleDaoTest.testDeleteArticle" />
         <item itemvalue="JUnit.ArticleDaoTest.queryArticle" />
-        <item itemvalue="JUnit.ArticleDaoTest.testInsertArticle" />
       </list>
     </recent_temporary>
   </component>
@@ -669,26 +713,13 @@
       <workItem from="1561433302913" duration="3055000" />
       <workItem from="1561455516787" duration="1354000" />
       <workItem from="1561463691980" duration="1625000" />
-      <workItem from="1561466442138" duration="4415000" />
+      <workItem from="1561466442138" duration="4678000" />
+      <workItem from="1561506645366" duration="15426000" />
+      <workItem from="1561535096624" duration="8287000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ArticleDaoTest_testInsertArticle - 2019.06.23 at 14h 37m 18s.xml">
-      <configuration name="ArticleDaoTest.testInsertArticle" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticleDaoTest_testInsertArticle - 2019.06.23 at 14h 39m 00s.xml">
-      <configuration name="ArticleDaoTest.testInsertArticle" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticleDaoTest_testInsertArticle - 2019.06.23 at 14h 57m 42s.xml">
-      <configuration name="ArticleDaoTest.testInsertArticle" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticleDaoTest_queryArticle - 2019.06.23 at 14h 58m 39s.xml">
-      <configuration name="ArticleDaoTest.queryArticle" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticleDaoTest_testDeleteArticle - 2019.06.23 at 15h 00m 09s.xml">
-      <configuration name="ArticleDaoTest.testDeleteArticle" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ArticleDaoTest_testDeleteArticle - 2019.06.23 at 15h 14m 00s.xml">
       <configuration name="ArticleDaoTest.testDeleteArticle" configurationId="JUnit" />
     </history-entry>
@@ -704,14 +735,30 @@
     <history-entry file="UserDaoTest_query - 2019.06.25 at 21h 59m 34s.xml">
       <configuration name="UserDaoTest.query" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserDaoTest_query1 - 2019.06.25 at 22h 07m 05s.xml">
+      <configuration name="UserDaoTest.query1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserDaoTest_query1 - 2019.06.25 at 22h 08m 47s.xml">
+      <configuration name="UserDaoTest.query1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserDaoTest_query - 2019.06.26 at 07h 56m 43s.xml">
+      <configuration name="UserDaoTest.query" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserCustomDaoTest_test - 2019.06.26 at 08h 00m 45s.xml">
+      <configuration name="UserCustomDaoTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserCustomDaoTest_test - 2019.06.26 at 14h 32m 48s.xml">
+      <configuration name="UserCustomDaoTest.test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93203000" />
+    <option name="totallyTimeSpent" value="117179000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1913" y="53" width="1358" height="814" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28615385" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20643431" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -719,7 +766,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2404692" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.17280453" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -728,7 +775,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.329429" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.52052784" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.45747802" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="14" />
@@ -748,67 +795,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/ArticleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/BannerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/ArticleVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-          <folding>
-            <element signature="e#227#228#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/BannnerCustomDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/BannerCustomDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/ArticleDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="924">
@@ -1024,13 +1010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/UserCustom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CommentDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
@@ -1153,60 +1132,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/UserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-service.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="80" column="52" selection-start-line="80" selection-start-column="52" selection-end-line="80" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1182#1183#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1308#1309#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="429">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/process/UserAccountProcess.java">
+    <entry file="file://$PROJECT_DIR$/src/test/com/nuc/calvin/ssm/dao/UserDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="781">
-          <caret line="48" column="14" lean-forward="true" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+        <state relative-caret-position="368">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/Result.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/UserCustom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-          <folding>
-            <element signature="e#699#700#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#872#873#0" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#1006#1007#0" expanded="true" />
-            <element signature="e#1040#1041#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-554">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/ArticleService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="264">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/Result.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/UserExecution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1214,66 +1171,148 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/Ok.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding>
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#168#169#0" expanded="true" />
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#232#233#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/process/UserAccountProcess.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1182#1183#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+            <element signature="e#1308#1309#0" expanded="true" />
+            <element signature="e#1486#1487#0" expanded="true" />
+            <element signature="e#1532#1533#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-179">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="2046">
+          <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/param/RegisterParam.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2576">
-          <caret line="133" column="28" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-service.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/nuc/calvin/ssm/dao/UserDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+        <state relative-caret-position="528">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ArticleCustomDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding>
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="99" column="18" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
+        <state relative-caret-position="312">
+          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        <state relative-caret-position="270">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/UserCustomDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-951">
+          <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="147" column="17" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/nuc/calvin/ssm/dao/UserCustomDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserCustomDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dto/LoginOk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-315">
+          <caret line="41" column="64" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -40,6 +40,14 @@ public class User {
      */
     private Date singUpTime;
 
+    public Date getSingUpTime() {
+        return singUpTime;
+    }
+
+    public void setSingUpTime(Date singUpTime) {
+        this.singUpTime = singUpTime;
+    }
+
     public Integer getUserId() {
         return userId;
     }

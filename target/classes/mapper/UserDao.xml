@@ -44,10 +44,11 @@
     </update>
 
     <!-- 插入用户数据-->
-    <insert id="insertUser" useGeneratedKeys="true" keyColumn="user_id" keyProperty="userId"
+    <insert id="insertUser" useGeneratedKeys="true" keyColumn="userId" keyProperty="userId"
             parameterType="com.nuc.calvin.ssm.entity.User">
-        insert into user(username,email,password,headImg,signature,sex,singUpTime)
+        insert into user(username,email,password,singUpTime)
         values (#{username,jdbcType=VARCHAR} ,#{email,jdbcType=VARCHAR} ,#{password,jdbcType=VARCHAR}
-        ,#{headImg,jdbcType=VARCHAR} ,#{signature,jdbcType=VARCHAR} ,#{singUpTime-} )
+        ,#{singUpTime,jdbcType=TIMESTAMP}  )
     </insert>
+
 </mapper>

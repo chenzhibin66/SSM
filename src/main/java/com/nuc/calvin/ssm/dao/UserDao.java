@@ -35,14 +35,18 @@ public interface UserDao {
 
     /**
      * 查询所有用户
+     *
      * @return
      */
     List<User> queryUserAll();
 
     /**
      * 修改用户信息
+     *
      * @param user
      * @return
      */
     int updateUser(User user);
+
+
 }

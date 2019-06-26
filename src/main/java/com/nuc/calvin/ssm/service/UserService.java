@@ -97,4 +97,6 @@ public interface UserService {
      * @return
      */
     List<UserCustom> queryUserByWord(String keyWord);
+
+    UserCustom getEmail(String email);
 }

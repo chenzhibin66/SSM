@@ -45,10 +45,11 @@ public interface UserCustomDao {
     /**
      * 添加用户
      */
-    public void insertUser(User user);
+    public int insertUser(User user);
 
     /**
      * 根据userId查询关注列表
+     *
      * @param userId
      * @return
      */
@@ -56,6 +57,7 @@ public interface UserCustomDao {
 
     /**
      * 根据userId查询粉丝列表
+     *
      * @param userId
      * @return
      */
@@ -72,4 +74,12 @@ public interface UserCustomDao {
      * 模糊查询用户
      */
     public List<UserCustom> queryUserByWord(String keyWord);
+
+    /**
+     * 获得登录邮箱
+     *
+     * @param email
+     * @return
+     */
+    UserCustom getEmail(String email);
 }
