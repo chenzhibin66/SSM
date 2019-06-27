@@ -4,43 +4,43 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.nuc.calvin.ssm.dao.ArticleCustomDao">
     <resultMap id="ArticleResultMap" type="com.nuc.calvin.ssm.entity.ArticleCustom">
-        <id column="article_id" property="articleId" jdbcType="INTEGER"/>
-        <id column="user_id" property="userId" jdbcType="INTEGER"/>
-        <id column="article_title" property="articleTitle" jdbcType="VARCHAR"/>
-        <id column="article_url" property="articleUrl" jdbcType="VARCHAR"/>
-        <id column="post_time" property="postTime" jdbcType="TIMESTAMP"/>
+        <id column="articleId" property="articleId" jdbcType="INTEGER"/>
+        <result column="userId" property="userId" jdbcType="INTEGER"/>
+        <result column="articleTitle" property="articleTitle" jdbcType="VARCHAR"/>
+        <result column="articleUrl" property="articleUrl" jdbcType="VARCHAR"/>
+        <result column="postTime" property="postTime" jdbcType="TIMESTAMP"/>
 
         <!-- 一对一关系-->
         <association property="user" javaType="com.nuc.calvin.ssm.entity.User">
-            <id column="user_id" property="userId" jdbcType="INTEGER"/>
+            <id column="userId" property="userId" jdbcType="INTEGER"/>
             <result column="username" property="username" jdbcType="VARCHAR"/>
             <result column="password" property="password" jdbcType="VARCHAR"/>
             <result column="email" property="email" jdbcType="VARCHAR"/>
             <result column="signature" property="signature" jdbcType="VARCHAR"/>
             <result column="sex" property="sex" jdbcType="INTEGER"/>
-            <result column="head_img" property="headImg" jdbcType="VARCHAR"/>
-            <result column="sing_up_time" property="singUpTime" jdbcType="DATE"/>
+            <result column="headImg" property="headImg" jdbcType="VARCHAR"/>
+            <result column="singUpTime" property="singUpTime" jdbcType="DATE"/>
         </association>
     </resultMap>
 
     <!-- 根据文章id查询微博 -->
     <select id="queryArticleByArticleId" parameterType="int" resultMap="ArticleResultMap">
-        select * from article,user where article.article_id=#{articleId,jdbcType=INTEGER}
-        and user.user_id=article.user_id
+        select * from article,user where article.articleId=#{articleId,jdbcType=INTEGER}
+        and user.userId=article.userId
     </select>
 
     <!-- 根据微博id删除微博 -->
     <delete id="deleteByArticleId" parameterType="int">
-        delete from article where article_id=#{articleId,jdbcType=INTEGER}
+        delete from article where articleId=#{articleId,jdbcType=INTEGER}
     </delete>
 
     <!-- 根据用户id查询微博 附加user昵称 头像 -->
     <select id="queryArticleByUserId" parameterType="Integer" resultMap="ArticleResultMap">
         select
-        user.username,user.head_img,article.* from article,user
+        user.username,user.headImg,article.* from article,user
         <where>
-            and article.user_id=#{userId,jdbcType=INTEGER}
-            and article.user_id=user.user_id order by post_time desc
+            and article.userId=#{userId,jdbcType=INTEGER}
+            and article.userId=user.userIdorder by post_time desc
         </where>
     </select>
 
@@ -50,16 +50,16 @@
         insert into article
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="articleCustom.userId != null">
-                user_id
+                userId
             </if>
             <if test="articleCustom.articleTitle != null">
-                article_title
+                articleTitle
             </if>
             <if test="articleCustom.articleUrl != null">
-                article_url
+                articleUrl
             </if>
             <if test="articleCustom.postTime != null">
-                post_time
+                postTime
             </if>
         </trim>
         <trim prefix="values(" suffix=")" suffixOverrides=",">
@@ -82,17 +82,17 @@
     <select id="queryCommentCount" parameterType="int" resultType="int">
         select count(*)
         from comment
-        where comment.article_id=#{articleId,jdbcType=INTEGER}
+        where comment.articleId=#{articleId,jdbcType=INTEGER}
     </select>
 
     <!--查询微博被回复次数-->
     <select id="queryReplyCount" parameterType="int" resultType="int">
         select count(*)
         from reply as r
-        where r.comment_id in(
-        select comment_id
+        where r.commentId in(
+        select commentId
         from comment
-        where comment.article_id=#{articleId,jdbcType=INTEGER}
+        where comment.articleId=#{articleId,jdbcType=INTEGER}
         )
     </select>
 
@@ -100,14 +100,18 @@
     <select id="queryLikeCount" parameterType="int" resultType="int">
         select count(*)
         form likes
-        where article_id=#{articleId,jdbcType=INTEGER}
+        where articleId=#{articleId,jdbcType=INTEGER}
     </select>
 
     <!-- 根据关键字搜索微博 -->
     <select id="queryArticleByWord" parameterType="String" resultMap="ArticleResultMap">
-	select user.username,user.head_img,article.*
+	select user.username,user.headImg,article.*
 	from article,user
-	where article.article_title like '%${keyWord,jdbcType=VARCHAR}%'
-	and article.user_id=user.user_id order by post_time desc
+	where article.articleTitle like '%${keyWord,jdbcType=VARCHAR}%'
+	and article.userId=user.userId order by postTime desc
 	</select>
+
+    <select id="queryAllArticle" resultMap="ArticleResultMap">
+        select * from article
+    </select>
 </mapper>

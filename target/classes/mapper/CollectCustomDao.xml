@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nuc.calvin.ssm.dao.CollectionCustomDao">
+    <resultMap id="CollectResultMap" type="com.nuc.calvin.ssm.entity.CollectCustom">
+        <id column="collectId" property="collectId" jdbcType="INTEGER"/>
+        <result column="articleId" property="articleId" jdbcType="INTEGER"/>
+        <result column="userId" property="userId" jdbcType="INTEGER"/>
+        <result column="collectTime" property="collectTime" jdbcType="TIMESTAMP"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="userImg" property="userImg" jdbcType="VARCHAR"/>
+        <result column="collectTime" property="collectTime" jdbcType="TIMESTAMP"/>
+
+        <association property="user" javaType="com.nuc.calvin.ssm.entity.UserCustom">
+            <id column="userId" property="userId" jdbcType="INTEGER"/>
+            <result column="username" property="username" jdbcType="VARCHAR"/>
+            <result column="email" property="email" jdbcType="VARCHAR"/>
+            <result column="password" property="password" jdbcType="VARCHAR"/>
+            <result column="headImg" property="headImg" jdbcType="VARCHAR"/>
+            <result column="signature" property="signature" jdbcType="VARCHAR"/>
+            <result column="sex" property="sex" jdbcType="INTEGER"/>
+            <result column="singUpTime" property="singUpTime" jdbcType="TIMESTAMP"/>
+        </association>
+
+        <association property="article" javaType="com.nuc.calvin.ssm.entity.ArticleCustom">
+            <id column="articleId" property="articleId" jdbcType="INTEGER"/>
+            <id column="userId" property="userId" jdbcType="INTEGER"/>
+            <id column="articleTitle" property="articleTitle" jdbcType="VARCHAR"/>
+            <id column="articleUrl" property="articleUrl" jdbcType="VARCHAR"/>
+            <id column="postTime" property="postTime" jdbcType="TIMESTAMP"/>
+        </association>
+    </resultMap>
+
+    <!--收藏-->
+    <insert id="collect" parameterType="com.nuc.calvin.ssm.entity.CollectCustom">
+        insert into collect (articleId,userId,collectTime)
+        values (#{articleId,jdbcType=INTEGER} ,#{userId,jdbcType=INTEGER} ,#{collectTime,jdbcType=TIMESTAMP} );
+    </insert>
+
+    <!--取消收藏-->
+    <delete id="uncollect" parameterType="com.nuc.calvin.ssm.entity.CollectCustom">
+        delete from collect where articleId=#{articleId,jdbcType=INTEGER}
+        and userId=#{userId,jdbcType=INTEGER}
+    </delete>
+
+    <!--用户是否取消收藏文章-->
+    <select id="isCollect" parameterType="com.nuc.calvin.ssm.entity.CollectCustom"
+            resultType="com.nuc.calvin.ssm.entity.CollectCustom">
+        select * from collcet where articleId=#{articleId,jdbcType=INTEGER}
+        and userId=#{userId,jdbcType=INTEGER}
+    </select>
+
+    <!-- 查询我的收藏列表 -->
+    <select id="queryAllCollection" parameterType="int" resultMap="CollectResultMap">
+        select c.collectTime,u.headImg,wu.headImg asauthorHeadImg,
+        wu.username as authorName,w.*
+        from collcet as c left join article as w on(c.articleId=w.articleId),
+        user as u,user as wu
+        where c.userId=u.userId and c.article_id in(
+        select w.articleId
+        from article as where
+        where c.userId=#{userId,jdbcType=INTEGER}
+        ) and wu.userId=w.userId order by c.collectTime desc
+    </select>
+</mapper>

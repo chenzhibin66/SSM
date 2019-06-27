@@ -25,8 +25,15 @@ public interface CollectionCustomDao {
 
     /**
      * 该用户是否收藏
+     *
      * @param collectCustom
      * @return
      */
     List<CollectCustom> isCollect(CollectCustom collectCustom);
+
+    /**
+     * 查询我的收藏列表
+     * @return
+     */
+    List<CollectCustom> queryAllCollection(Integer userId);
 }

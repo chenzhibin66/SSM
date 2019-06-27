@@ -1,20 +1,20 @@
 package com.nuc.calvin.ssm.dto;
 
-import com.nuc.calvin.ssm.entity.User;
+import com.nuc.calvin.ssm.entity.Article;
 
 /**
  * @author Calvin
  * @Description:
  */
-public class LoginOk {
+public class ArticleOk {
     private int code;
     private String msg;
-    private User user;
+    private Article article;
 
-    public LoginOk(int code, String msg, User user) {
+    public ArticleOk(int code, String msg, Article article) {
         this.code = code;
         this.msg = msg;
-        this.user = user;
+        this.article = article;
     }
 
     public int getCode() {
@@ -33,11 +33,11 @@ public class LoginOk {
         this.msg = msg;
     }
 
-    public User getUser() {
-        return user;
+    public Article getArticle() {
+        return article;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setArticle(Article article) {
+        this.article = article;
     }
 }

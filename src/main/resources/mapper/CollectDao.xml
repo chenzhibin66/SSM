@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nuc.calvin.ssm.dao.CollectionDao">
+    <resultMap id="BaseResultMap" type="com.nuc.calvin.ssm.entity.Collect">
+        <id column="collectId" property="collectId" jdbcType="INTEGER"/>
+        <result column="userId" property="userId" jdbcType="INTEGER"/>
+        <result column="articleId" property="articleId" jdbcType="INTEGER"/>
+        <result column="collectTime" property="collectTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.nuc.calvin.ssm.entity.Collect">
+        insert into collect (collectId,articleId,userId,collectTime)
+        values (#{collectId,jdbcType=INTEGER} ,#{articleId,jdbcType=INTEGER}
+        ,#{userId,jdbcType=INTEGER} ,#{collectTime,jdbcType=TIMESTAMP} );
+    </insert>
+
+    <select id="queryByCollectId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select collectId,articleId,userId,collectTime
+        from collect
+        where collectId=#{collectId,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteByCollectId" parameterType="java.lang.Integer">
+        delete from collect
+        where collectId=#{collectId,jdbcType=INTEGER}
+    </delete>
+
+    <update id="updateByCollectId" parameterType="com.nuc.calvin.ssm.entity.Collect">
+        update collcet set
+        articleId=#{articleId,jdbcType=INTEGER} ,
+        userId=#{userId,jdbcType=INTEGER} ,
+        collectTime=#{collectTime,jdbcType=TIMESTAMP}
+    </update>
+</mapper>

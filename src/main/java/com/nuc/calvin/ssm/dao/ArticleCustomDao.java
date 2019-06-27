@@ -80,4 +80,10 @@ public interface ArticleCustomDao {
      * @return
      */
     int queryReplyCount(Integer articleId);
+
+    /**
+     * 查询所有文章
+     * @return
+     */
+    List<ArticleCustom> queryAllArticle();
 }

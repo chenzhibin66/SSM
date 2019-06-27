@@ -60,8 +60,15 @@ public interface ArticleService {
 
     /**
      * 根据关键字查询相关文章
+     *
      * @param keyWord
      * @return
      */
-    List<Article> queryArticleByWord(String keyWord);
+    List<ArticleCustom> queryArticleByWord(String keyWord);
+
+    /**
+     * 查询所有文章
+     * @return
+     */
+    List<ArticleCustom> queryAllArticle();
 }

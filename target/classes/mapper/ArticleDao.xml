@@ -4,38 +4,38 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.nuc.calvin.ssm.dao.ArticleDao">
     <resultMap id="BaseResultMap" type="com.nuc.calvin.ssm.entity.Article">
-        <id column="article_id" property="articleId" jdbcType="INTEGER"/>
-        <result column="user_id" property="userId" jdbcType="INTEGER"/>
-        <result column="article_title" property="articleTitle" jdbcType="VARCHAR"/>
-        <result column="article_url" property="articleUrl" jdbcType="VARCHAR"/>
-        <result column="post_time" property="postTime" jdbcType="DATE"/>
+        <id column="articleId" property="articleId" jdbcType="INTEGER"/>
+        <result column="userId" property="userId" jdbcType="INTEGER"/>
+        <result column="articleTitle" property="articleTitle" jdbcType="VARCHAR"/>
+        <result column="articleUrl" property="articleUrl" jdbcType="VARCHAR"/>
+        <result column="postTime" property="postTime" jdbcType="DATE"/>
     </resultMap>
 
     <!--插入文章-->
     <insert id="insertArticle" useGeneratedKeys="true" keyColumn="article_id" keyProperty="articleId"
             parameterType="com.nuc.calvin.ssm.entity.Article">
-        insert into article(article_id,user_id,article_title,article_url,post_time)
+        insert into article(articleId,userId,articleTitle,articleUrl,postTime)
         values (#{articleId,jdbcType=INTEGER} ,#{userId,jdbcType=INTEGER} ,#{articleTitle,jdbcType=VARCHAR}
         ,#{articleUrl,jdbcType=VARCHAR} ,#{postTime,jdbcType=TIMESTAMP} )
     </insert>
 
     <!--删除文章-->
     <delete id="deleteArticleById" parameterType="com.nuc.calvin.ssm.entity.Article">
-        delete from article where article_id=#{articleId,jdbcType=INTEGER}
+        delete from article where articleId=#{articleId,jdbcType=INTEGER}
     </delete>
 
     <!-- 根据文章id更新文章-->
     <update id="updateArticleById" parameterType="com.nuc.calvin.ssm.entity.Article">
         update article set
-        user_id=#{userId,jdbcType=INTEGER} ,
-        article_title=#{articleTitle,jdbcType=VARCHAR} ,
-        article_url=#{articleUrl,jdbcType=VARCHAR}
-        where article_id=#{articleId,jdbcType=INTEGER}
+        userId=#{userId,jdbcType=INTEGER} ,
+        articleTitle=#{articleTitle,jdbcType=VARCHAR} ,
+        articleUrl=#{articleUrl,jdbcType=VARCHAR}
+        where articleId=#{articleId,jdbcType=INTEGER}
     </update>
 
     <!--根据id查文章-->
     <select id="queryArticleById" parameterType="com.nuc.calvin.ssm.entity.Article">
-        select * from article where article_id=#{articleId,jdbcType=INTEGER}
+        select * from article where articleId=#{articleId,jdbcType=INTEGER}
     </select>
 
     <!-- 查询所有文章-->

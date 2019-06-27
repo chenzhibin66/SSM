@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nuc.calvin.ssm.dao.LikesCustomDao">
+    <resultMap id="LikeResultMap" type="com.nuc.calvin.ssm.entity.LikesCustom">
+        <id column="likesId" property="likesId" jdbcType="INTEGER"/>
+        <result column="userId" property="userId" jdbcType="INTEGER"/>
+        <result column="articleId" property="articleId" jdbcType="INTEGER"/>
+        <result column="likesTime" property="likesTime" jdbcType="INTEGER"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="userImg" property="userImg" jdbcType="VARCHAR"/>
+
+        <association property="user" javaType="com.nuc.calvin.ssm.entity.UserCustom">
+            <id column="userId" property="userId" jdbcType="INTEGER"/>
+            <result column="username" property="username" jdbcType="VARCHAR"/>
+            <result column="password" property="password" jdbcType="VARCHAR"/>
+            <result column="email" property="email" jdbcType="VARCHAR"/>
+            <result column="signature" property="signature" jdbcType="VARCHAR"/>
+            <result column="sex" property="sex" jdbcType="INTEGER"/>
+            <result column="headImg" property="headImg" jdbcType="VARCHAR"/>
+            <result column="singUpTime" property="singUpTime" jdbcType="DATE"/>
+        </association>
+
+        <association property="article" javaType="com.nuc.calvin.ssm.entity.ArticleCustom">
+            <id column="articleId" property="articleId" jdbcType="INTEGER"/>
+            <result column="userId" property="userId" jdbcType="INTEGER"/>
+            <result column="articleTitle" property="articleTitle" jdbcType="VARCHAR"/>
+            <result column="articleUrl" property="articleUrl" jdbcType="VARCHAR"/>
+            <result column="postTime" property="postTime" jdbcType="TIMESTAMP"/>
+        </association>
+    </resultMap>
+
+    <!--点赞-->
+    <insert id="like" parameterType="com.nuc.calvin.ssm.entity.LikesCustom">
+        insert into likes (userId,articleId,likesTime)
+        values (#{userId,jdbcType=INTEGER} ,#{articleId,jdbcType=INTEGER} ,#{likesTime,jdbcType=TIMESTAMP} );
+    </insert>
+
+    <!--取消赞-->
+    <delete id="unLike" parameterType="com.nuc.calvin.ssm.entity.LikesCustom">
+        delete from likes
+        where likes.userId=#{userId,jdbcType=INTEGER} and likes.articleId=#{articleId,jdbcType=INTEGER}
+    </delete>
+
+    <!--是否赞-->
+    <select id="queryIsLike" parameterType="com.nuc.calvin.ssm.entity.LikesCustom" resultType="com.nuc.calvin.ssm.entity.LikesCustom">
+        select * from likes where lieks.userId=#{userId,jdbcType=INTEGER}
+        and likes.articleId=#{articleId,jdbcType=INTEGER}
+    </select>
+
+   <!-- 查询userId的被赞记录-->
+    <select id="queryLikesByUserId" parameterType="int" resultMap="LikeResultMap">
+        select l.likeTime,u.headImg,u.username,w.articleUrl,w.articleId,wu.username as authorName
+        from likes as l left join
+        article as w on(l.articleId=w.articleId),user as u,user as wu
+        where l.userId=u.userId and l.articleId in(
+        select w.articleId from article as w
+        where w.userId=#{userId,jdbcType=INTEGER}
+        )and wu.userId=w.userId order by l.likeTime desc
+    </select>
+</mapper>

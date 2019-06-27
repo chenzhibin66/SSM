@@ -11,7 +11,7 @@
         <result column="signature" property="signature" jdbcType="VARCHAR"/>
         <result column="sex" property="sex" jdbcType="INTEGER"/>
         <result column="headImg" property="headImg" jdbcType="VARCHAR"/>
-        <result column="singUpTime" property="singUpTime" jdbcType="DATE"/>
+        <result column="singUpTime" property="singUpTime" jdbcType="TIMESTAMP"/>
 
         <!--一对一关系-->
         <association property="relation" javaType="com.nuc.calvin.ssm.entity.Relation">
