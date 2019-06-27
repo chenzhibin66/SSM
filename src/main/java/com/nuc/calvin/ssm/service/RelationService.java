@@ -1,4 +1,4 @@
-package com.nuc.calvin.ssm.dao;
+package com.nuc.calvin.ssm.service;
 
 import com.nuc.calvin.ssm.entity.Relation;
 
@@ -8,7 +8,7 @@ import java.util.List;
  * @author Calvin
  * @Description:
  */
-public interface RelationCustomDao {
+public interface RelationService {
     /**
      * 查询相互关注
      *
@@ -18,7 +18,7 @@ public interface RelationCustomDao {
     List<Relation> queryMutual(Relation relation);
 
     /**
-     * 查询单方关注
+     * 查询是否单方关注
      *
      * @param relation
      * @return
@@ -29,19 +29,25 @@ public interface RelationCustomDao {
      * 关注
      *
      * @param relation
+     * @param flag
      */
-    void follow(Relation relation);
+    void follow(Relation relation, int flag);
 
     /**
      * 取关
      *
      * @param relation
+     * @param flag
      */
-    void unFollow(Relation relation);
+    void unFollow(Relation relation, int flag);
 
     /**
-     * 改变关注状态
-     * @param relation
+     * 查询关系
+     *
+     * @param userId
+     * @param followId
+     * @return
      */
-    void Status(Relation relation);
+    int queryRelation(Integer userId, Integer followId);
+
 }

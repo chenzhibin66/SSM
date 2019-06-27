@@ -1,6 +1,5 @@
-package com.nuc.calvin.ssm.dao;
+package com.nuc.calvin.ssm.service;
 
-import com.nuc.calvin.ssm.entity.Relation;
 import com.nuc.calvin.ssm.entity.ReplyCustom;
 
 import java.util.List;
@@ -9,17 +8,16 @@ import java.util.List;
  * @author Calvin
  * @Description:
  */
-public interface ReplyCustomDao {
-
+public interface ReplyService {
     /**
      * 添加回复
      *
-     * @param custom
+     * @param replyCustom
      */
-    void addReply(ReplyCustom custom);
+    void addReply(ReplyCustom replyCustom);
 
     /**
-     * 根据评论id遍历回复
+     * 遍历commentId的回复
      *
      * @param commentId
      * @return

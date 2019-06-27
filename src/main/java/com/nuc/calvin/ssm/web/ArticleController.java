@@ -25,11 +25,18 @@ public class ArticleController {
     @Autowired
     private UserService userService;
 
-    /*public List<ArticleOk> queryAllArticle(HttpServletRequest request, HttpSession session) {
+    /**
+     * 查询所有文章
+     * @param request
+     * @param session
+     * @return
+     */
+   /* public List<ArticleOk> queryAllArticle(HttpServletRequest request, HttpSession session) {
         UserCustom user = (UserCustom) session.getAttribute("user");
         List<ArticleCustom> articleList = articleService.queryAllArticle();
         for (ArticleCustom articleCustom : articleList) {
-
+            //用户是否赞过
+            articleCustom.setLikes();
         }
 
     }*/

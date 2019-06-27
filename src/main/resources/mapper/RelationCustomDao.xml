@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nuc.calvin.ssm.dao.RelationCustomDao">
+    <resultMap id="RelationResultMap" type="com.nuc.calvin.ssm.entity.Relation">
+        <id column="relationId" property="relationId" jdbcType="INTEGER"/>
+        <result column="userId" property="userId" jdbcType="INTEGER"/>
+        <result column="followId" property="followId" jdbcType="INTEGER"/>
+        <result column="state" property="state" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!-- 判断相互关注 -->
+    <select id="queryMutual" parameterType="com.nuc.calvin.ssm.entity.Relation" resultType="com.nuc.calvin.ssm.entity.Relation">
+        select * from relation where (userId=#{userId,jdbcType=INTEGER}
+        and state=2) or (userId=#{followId,jdbcType=INTEGER}
+        and followId=#{userId,jdbcType=INTEGER} and state=2 )
+    </select>
+
+    <!-- 判断单方关注 -->
+    <select id="queryUnilateral" parameterType="com.nuc.calvin.ssm.entity.Relation"
+            resultType="com.nuc.calvin.ssm.entity.Relation">
+        select * from relation where userId=#{userId,jdbcType=INTEGER}
+        and followId=#{followId,jdbcType=INTEGER} and state=1
+    </select>
+
+    <!--关注-->
+    <insert id="follow" parameterType="com.nuc.calvin.ssm.entity.Relation" keyProperty="relationId"
+            useGeneratedKeys="true">
+        insert into relation (userId,followId,state)
+        values (#{userId,jdbcType=INTEGER} ,#{followId,jdbcType=INTEGER} ,#{state,jdbcType=INTEGER} );
+    </insert>
+
+    <!-- 改变关注状态 -->
+    <update id="Status" parameterType="com.nuc.calvin.ssm.entity.Relation">
+        update relation set
+        state=#{state,jdbcType=INTEGER}
+        where userId=#{userId,jdbcType=INTEGER} and followId=#{followId,jdbcType=INTEGER}
+    </update>
+    <!--取关-->
+    <delete id="unFollow" parameterType="com.nuc.calvin.ssm.entity.Relation">
+        delete from relation where userId=#{userId,jdbcType=INTEGER} and
+        followId=#{followId,jdbcType=INTEGER}
+    </delete>
+</mapper>

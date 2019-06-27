@@ -8,7 +8,7 @@ import com.nuc.calvin.ssm.entity.Relation;
  */
 public interface RelationDao {
 
-    int insert(Relation relation);
+    int insertRelation(Relation relation);
 
     Relation queryByRelationId(Integer relationId);
 
