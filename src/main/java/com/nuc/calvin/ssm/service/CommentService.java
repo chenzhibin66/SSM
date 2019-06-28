@@ -1,4 +1,4 @@
-package com.nuc.calvin.ssm.dao;
+package com.nuc.calvin.ssm.service;
 
 import com.nuc.calvin.ssm.entity.CommentCustom;
 
@@ -8,7 +8,7 @@ import java.util.List;
  * @author Calvin
  * @Description:
  */
-public interface CommentCustomDao {
+public interface CommentService {
     /**
      * 评论
      *
@@ -17,7 +17,7 @@ public interface CommentCustomDao {
     void addComment(CommentCustom commentCustom);
 
     /**
-     * 查询文章的评论
+     * 查询微博下的评论
      *
      * @param articleId
      * @return
@@ -25,7 +25,7 @@ public interface CommentCustomDao {
     List<CommentCustom> queryComment(Integer articleId);
 
     /**
-     * 查询评下下回复数量
+     * 查询评论下回复数
      *
      * @param commentId
      * @return
@@ -33,8 +33,7 @@ public interface CommentCustomDao {
     int queryCountReply(Integer commentId);
 
     /**
-     * 删除评论
-     *
+     * 根据id删除评论
      * @param commentId
      */
     void deleteCommentById(Integer commentId);
