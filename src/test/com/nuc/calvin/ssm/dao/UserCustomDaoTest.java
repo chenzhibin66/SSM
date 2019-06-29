@@ -23,7 +23,6 @@ public class UserCustomDaoTest extends BaseTest {
         User user = new User();
         user.setUsername("calvin");
         user.setEmail("809122566@qq.com");
-        user.setSingUpTime(new Date());
         user.setPassword("000000");
         userCustomDao.insertUser(user);
     }

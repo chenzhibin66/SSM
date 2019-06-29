@@ -7,7 +7,7 @@
         <id column="likesId" property="likesId" jdbcType="INTEGER"/>
         <result column="userId" property="userId" jdbcType="INTEGER"/>
         <result column="articleId" property="articleId" jdbcType="INTEGER"/>
-        <result column="likesTime" property="likesTime" jdbcType="INTEGER"/>
+        <result column="likesTime" property="likesTime" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <insert id="insert" parameterType="com.nuc.calvin.ssm.entity.Likes">

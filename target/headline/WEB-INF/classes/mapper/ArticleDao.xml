@@ -8,7 +8,7 @@
         <result column="userId" property="userId" jdbcType="INTEGER"/>
         <result column="articleTitle" property="articleTitle" jdbcType="VARCHAR"/>
         <result column="articleUrl" property="articleUrl" jdbcType="VARCHAR"/>
-        <result column="postTime" property="postTime" jdbcType="DATE"/>
+        <result column="postTime" property="postTime" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <!--插入文章-->

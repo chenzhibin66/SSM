@@ -99,4 +99,6 @@ public interface UserService {
     List<UserCustom> queryUserByWord(String keyWord);
 
     UserCustom getEmail(String email);
+
+    List<UserCustom> queryAllUser();
 }

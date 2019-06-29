@@ -1,16 +1,17 @@
 package com.nuc.calvin.ssm.web;
 
+import ch.qos.logback.classic.pattern.DateConverter;
 import com.nuc.calvin.ssm.dto.ArticleOk;
-import com.nuc.calvin.ssm.entity.Article;
-import com.nuc.calvin.ssm.entity.ArticleCustom;
-import com.nuc.calvin.ssm.entity.UserCustom;
-import com.nuc.calvin.ssm.service.ArticleService;
-import com.nuc.calvin.ssm.service.UserService;
+import com.nuc.calvin.ssm.dto.Ok;
+import com.nuc.calvin.ssm.entity.*;
+import com.nuc.calvin.ssm.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -18,6 +19,7 @@ import java.util.List;
  * @Description:
  */
 @Controller("ArticleController")
+@RequestMapping("/article")
 public class ArticleController {
     @Autowired
     private ArticleService articleService;
@@ -25,21 +27,53 @@ public class ArticleController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private LikesService likesService;
+
+    @Autowired
+    private ReplyService replyService;
+
+    @Autowired
+    private CommentService commentService;
+
+    @Autowired
+    private CollectService collectService;
+
     /**
      * 查询所有文章
-     * @param request
-     * @param session
+     *
+     * @param
      * @return
      */
-   /* public List<ArticleOk> queryAllArticle(HttpServletRequest request, HttpSession session) {
-        UserCustom user = (UserCustom) session.getAttribute("user");
+
+    @ResponseBody
+    @RequestMapping("/getAllArticle")
+    public List<ArticleCustom> queryAllArticle() {
         List<ArticleCustom> articleList = articleService.queryAllArticle();
-        for (ArticleCustom articleCustom : articleList) {
-            //用户是否赞过
-            articleCustom.setLikes();
+
+        return articleList;
+    }
+
+    @ResponseBody
+    @RequestMapping("/postArticle")
+    public Ok postArticle(HttpServletRequest request) {
+        String userId = request.getParameter("userId");
+        String title = request.getParameter("title");
+        String url = request.getParameter("url");
+        System.out.println(" useridtest:" + userId);
+        System.out.println(" url:" + url);
+        System.out.println(" title:" + title);
+        int articleCountPre = userService.queryArticleCount(Integer.valueOf(userId));
+        ArticleCustom articleCustom = new ArticleCustom();
+        articleCustom.setUserId(Integer.valueOf(userId));
+        articleCustom.setArticleTitle(title);
+        articleCustom.setArticleUrl(url);
+        articleService.post(articleCustom);
+        int articleCountNew = userService.queryArticleCount(Integer.valueOf(userId));
+        if (articleCountNew == articleCountPre + 1) {
+            return new Ok(1, "成功分享文章！");
+        } else {
+            return new Ok(0, "分享文章失败！");
         }
-
-    }*/
-
-
+    }
 }

@@ -11,7 +11,7 @@
         <result column="signature" property="signature" jdbcType="VARCHAR"/>
         <result column="sex" property="sex" jdbcType="INTEGER"/>
         <result column="headImg" property="headImg" jdbcType="VARCHAR"/>
-        <result column="singUpTime" property="singUpTime" jdbcType="DATE"/>
+
 
         <!--一对一关系-->
         <association property="relation" javaType="com.nuc.calvin.ssm.entity.Relation">
@@ -43,8 +43,8 @@
 
     <!-- 插入新用户 -->
     <insert id="insertUser" parameterType="com.nuc.calvin.ssm.entity.User" keyProperty="userId" useGeneratedKeys="true">
-        insert into user(username,email,password,singUpTime)
-        values (#{username,jdbcType=VARCHAR} ,#{email,jdbcType=VARCHAR} ,#{password,jdbcType=VARCHAR} ,#{singUpTime,jdbcType=TIMESTAMP}  )
+        insert into user(username,email,password)
+        values (#{username,jdbcType=VARCHAR} ,#{email,jdbcType=VARCHAR} ,#{password,jdbcType=VARCHAR} )
     </insert>
     <!-- 登录验证 -->
     <select id="loginVerify" parameterType="com.nuc.calvin.ssm.entity.UserVo" resultMap="UserResultMap">
@@ -118,5 +118,9 @@
 
     <select id="getEmail" parameterType="String" resultMap="UserResultMap">
         select * from user where email=#{email,jdbcType=VARCHAR}
+    </select>
+
+    <select id="queryAllUser" parameterType="com.nuc.calvin.ssm.entity.UserCustom" resultMap="UserResultMap">
+        select * from user
     </select>
 </mapper>

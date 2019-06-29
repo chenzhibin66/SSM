@@ -1,5 +1,7 @@
 package com.nuc.calvin.ssm.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 /**
@@ -35,18 +37,7 @@ public class User {
      * 用户性别   0--男   1--女
      */
     private Integer sex;
-    /**
-     * 注册时间
-     */
-    private Date singUpTime;
 
-    public Date getSingUpTime() {
-        return singUpTime;
-    }
-
-    public void setSingUpTime(Date singUpTime) {
-        this.singUpTime = singUpTime;
-    }
 
     public Integer getUserId() {
         return userId;
@@ -104,17 +95,5 @@ public class User {
         this.sex = sex;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "userId=" + userId +
-                ", username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", headImg='" + headImg + '\'' +
-                ", signature='" + signature + '\'' +
-                ", sex=" + sex +
-                ", singUpTime=" + singUpTime +
-                '}';
-    }
+
 }

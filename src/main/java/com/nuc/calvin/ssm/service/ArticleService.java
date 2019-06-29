@@ -23,9 +23,9 @@ public interface ArticleService {
     /**
      * 发微博
      *
-     * @param articleVo
+     * @param
      */
-    void post(ArticleVo articleVo);
+    void post(ArticleCustom articleCustom);
 
     /**
      * 根据文章id删除文章

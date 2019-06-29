@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nuc.calvin.ssm.dao.RelationDao">
+    <resultMap id="BaseResultMap" type="com.nuc.calvin.ssm.entity.Relation">
+        <id column="relationId" property="relationId" jdbcType="INTEGER"/>
+        <result column="userId" property="userId" jdbcType="INTEGER"/>
+        <result column="followId" property="followId" jdbcType="INTEGER"/>
+        <result column="state" property="state" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <insert id="insertRelation" useGeneratedKeys="true" parameterType="com.nuc.calvin.ssm.entity.Relation"
+            keyColumn="relationId" keyProperty="relationId">
+        insert into relation (userId,followId,state)
+         values (#{userId,jdbcType=INTEGER} ,#{followId,jdbcType=INTEGER} ,#{state,jdbcType=INTEGER} );
+    </insert>
+
+    <delete id="deleteByRelationId" parameterType="java.lang.Integer">
+        delete from relation
+        where relationId=#{relationId,jdbcType=INTEGER}
+    </delete>
+
+    <update id="updateByRelationId" parameterType="com.nuc.calvin.ssm.entity.Relation">
+        update relation set
+        userId=#{userId,jdbcType=INTEGER} ,
+        followId=#{followId,jdbcType=INTEGER} ,
+        state=#{state,jdbcType=INTEGER}
+        where relationId=#{relationId,jdbcType=INTEGER}
+    </update>
+
+    <select id="queryByRelationId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select relationId,userId,followId,state
+        from relation where relationId=@{relationId,jdbcType=INTEGER}
+    </select>
+</mapper>

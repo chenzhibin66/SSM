@@ -85,4 +85,9 @@ public class UserServiceImpl implements UserService {
     public UserCustom getEmail(String email) {
         return userCustomDao.getEmail(email);
     }
+
+    @Override
+    public List<UserCustom> queryAllUser() {
+        return userCustomDao.queryAllUser();
+    }
 }

@@ -1,5 +1,7 @@
 package com.nuc.calvin.ssm.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 /**
@@ -23,10 +25,7 @@ public class Article {
      * 文章url
      */
     private String articleUrl;
-    /**
-     * 发布时间
-     */
-    private Date postTime;
+
 
     public Integer getArticleId() {
         return articleId;
@@ -40,7 +39,7 @@ public class Article {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void  setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -60,11 +59,5 @@ public class Article {
         this.articleUrl = articleUrl;
     }
 
-    public Date getPostTime() {
-        return postTime;
-    }
 
-    public void setPostTime(Date postTime) {
-        this.postTime = postTime;
-    }
 }

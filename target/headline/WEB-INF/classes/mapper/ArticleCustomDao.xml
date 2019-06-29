@@ -5,10 +5,10 @@
 <mapper namespace="com.nuc.calvin.ssm.dao.ArticleCustomDao">
     <resultMap id="ArticleResultMap" type="com.nuc.calvin.ssm.entity.ArticleCustom">
         <id column="articleId" property="articleId" jdbcType="INTEGER"/>
-        <id column="userId" property="userId" jdbcType="INTEGER"/>
-        <id column="articleTitle" property="articleTitle" jdbcType="VARCHAR"/>
-        <id column="articleUrl" property="articleUrl" jdbcType="VARCHAR"/>
-        <id column="postTime" property="postTime" jdbcType="TIMESTAMP"/>
+        <result column="userId" property="userId" jdbcType="INTEGER"/>
+        <result column="articleTitle" property="articleTitle" jdbcType="VARCHAR"/>
+        <result column="articleUrl" property="articleUrl" jdbcType="VARCHAR"/>
+        <result column="postTime" property="postTime" jdbcType="TIMESTAMP"/>
 
         <!-- 一对一关系-->
         <association property="user" javaType="com.nuc.calvin.ssm.entity.User">
@@ -19,7 +19,7 @@
             <result column="signature" property="signature" jdbcType="VARCHAR"/>
             <result column="sex" property="sex" jdbcType="INTEGER"/>
             <result column="headImg" property="headImg" jdbcType="VARCHAR"/>
-            <result column="singUpTime" property="singUpTime" jdbcType="DATE"/>
+
         </association>
     </resultMap>
 
@@ -47,35 +47,9 @@
     <!-- 发文章 -->
     <insert id="postArticle" parameterType="com.nuc.calvin.ssm.entity.ArticleVo" keyProperty="articleId"
             useGeneratedKeys="true">
-        insert into article
-        <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="articleCustom.userId != null">
-                userId
-            </if>
-            <if test="articleCustom.articleTitle != null">
-                articleTitle
-            </if>
-            <if test="articleCustom.articleUrl != null">
-                articleUrl
-            </if>
-            <if test="articleCustom.postTime != null">
-                postTime
-            </if>
-        </trim>
-        <trim prefix="values(" suffix=")" suffixOverrides=",">
-            <if test="articleCustom.userId != null">
-                #{articleCustom.userId,jdbcType=INTEGER}
-            </if>
-            <if test="articleCustom.articleTitle != null">
-                #{articleCustom.articleTitle,jdbcType=VARCHAR}
-            </if>
-            <if test="articleCustom.articleUrl != null">
-                #{articleCustom.articleUrl,jdbcType=VARCHAR}
-            </if>
-            <if test="articleCustom.postTime != null">
-                #{articleCustom.postTime,jdbcType=TIMESTAMP}
-            </if>
-        </trim>
+        insert into article(userId,articleTitle,articleUrl)
+        values (#{userId,jdbcType=INTEGER} ,#{articleTitle,jdbcType=VARCHAR} ,#{articleUrl,jdbcType=VARCHAR}  )
+
     </insert>
 
     <!--查询微博被评论次数-->
@@ -112,6 +86,7 @@
 	</select>
 
     <select id="queryAllArticle" resultMap="ArticleResultMap">
-        select * from article
+        select * from article as a inner join user as u on a.userId=u.userId
+        
     </select>
 </mapper>

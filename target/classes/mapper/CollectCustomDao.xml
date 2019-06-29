@@ -47,7 +47,7 @@
     <!--用户是否取消收藏文章-->
     <select id="isCollect" parameterType="com.nuc.calvin.ssm.entity.CollectCustom"
             resultType="com.nuc.calvin.ssm.entity.CollectCustom">
-        select * from collcet where articleId=#{articleId,jdbcType=INTEGER}
+        select * from collect where articleId=#{articleId,jdbcType=INTEGER}
         and userId=#{userId,jdbcType=INTEGER}
     </select>
 

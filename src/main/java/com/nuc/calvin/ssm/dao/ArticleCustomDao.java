@@ -29,10 +29,9 @@ public interface ArticleCustomDao {
 
     /**
      * 分享文章
-     *
-     * @param articleVo
+     * @param articleCustom
      */
-    void postArticle(ArticleVo articleVo);
+    void postArticle(ArticleCustom articleCustom);
 
     /**
      * 根据文章id删除文章

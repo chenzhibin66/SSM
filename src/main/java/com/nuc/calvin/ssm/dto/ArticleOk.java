@@ -1,6 +1,9 @@
 package com.nuc.calvin.ssm.dto;
 
 import com.nuc.calvin.ssm.entity.Article;
+import com.nuc.calvin.ssm.entity.ArticleCustom;
+
+import java.util.List;
 
 /**
  * @author Calvin
@@ -9,12 +12,12 @@ import com.nuc.calvin.ssm.entity.Article;
 public class ArticleOk {
     private int code;
     private String msg;
-    private Article article;
+    private List<ArticleCustom> articles;
 
-    public ArticleOk(int code, String msg, Article article) {
+    public ArticleOk(int code, String msg, List<ArticleCustom> articles) {
         this.code = code;
         this.msg = msg;
-        this.article = article;
+        this.articles = articles;
     }
 
     public int getCode() {
@@ -33,11 +36,11 @@ public class ArticleOk {
         this.msg = msg;
     }
 
-    public Article getArticle() {
-        return article;
+    public List<ArticleCustom> getArticles() {
+        return articles;
     }
 
-    public void setArticle(Article article) {
-        this.article = article;
+    public void setArticles(List<ArticleCustom> articles) {
+        this.articles = articles;
     }
 }

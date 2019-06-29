@@ -8,8 +8,9 @@ public class Ok {
     private int code ;
     private String msg ;
 
-    public Ok(int code, String s) {
+    public Ok(int code, String msg) {
         this.code = code;
+        this.msg = msg;
     }
 
     public int getCode() {

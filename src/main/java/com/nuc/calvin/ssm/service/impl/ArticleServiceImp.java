@@ -35,11 +35,11 @@ public class ArticleServiceImp implements ArticleService {
 
     /**
      * 发表文章
-     * @param articleVo
+     * @param
      */
     @Override
-    public void post(ArticleVo articleVo) {
-        articleCustomDao.postArticle(articleVo);
+    public void post(ArticleCustom articleCustom) {
+        articleCustomDao.postArticle(articleCustom);
     }
 
     /**

@@ -44,6 +44,12 @@ public class UserController {
         String password = request.getParameter("password");
         UserCustom user = new UserCustom();
         user = userService.getEmail(email);
+        int articleCount = userService.queryArticleCount(user.getUserId());
+        int followCount = userService.queryFollowCount(user.getUserId());
+        int fansCount = userService.queryFansCount(user.getUserId());
+        user.setFollowCount(followCount);
+        user.setFansCount(fansCount);
+        user.setArticleCount(articleCount);
         List<LoginOk> list = new ArrayList<>();
         if (user != null && user.getPassword().equals(password)) {
             list.add(new LoginOk(1, "登录成功!", user));
@@ -57,7 +63,6 @@ public class UserController {
     @ResponseBody
     @RequestMapping("/userRegister")
     public Ok userRegister(HttpServletRequest request) {
-        System.out.println("wangtianrui" + request.getParameter("email"));
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
@@ -69,9 +74,15 @@ public class UserController {
             user1.setUsername(username);
             user1.setEmail(email);
             user1.setPassword(password);
-            user1.setSingUpTime(new Date());
             userService.singUpUser(user1);
             return new Ok(1, "注册成功!");
         }
+    }
+
+    @ResponseBody
+    @RequestMapping("/queryAllUser")
+    public List<UserCustom> queryAllUser() {
+        List<UserCustom> userCustomList = userService.queryAllUser();
+        return userCustomList;
     }
 }

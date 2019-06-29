@@ -82,4 +82,10 @@ public interface UserCustomDao {
      * @return
      */
     UserCustom getEmail(String email);
+
+    /**
+     * 查询所有用户
+     * @return
+     */
+    List<UserCustom> queryAllUser();
 }
