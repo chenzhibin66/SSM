@@ -12,13 +12,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author Calvin
  * @Description:
  */
-@Controller("ArticleController")
+@Controller("articleController")
 @RequestMapping("/article")
 public class ArticleController {
     @Autowired
@@ -48,10 +49,23 @@ public class ArticleController {
 
     @ResponseBody
     @RequestMapping("/getAllArticle")
-    public List<ArticleCustom> queryAllArticle() {
+    public List<ArticleCustom> queryAllArticle(HttpServletRequest request) {
+        Integer userId = Integer.valueOf(request.getParameter("userId"));
         List<ArticleCustom> articleList = articleService.queryAllArticle();
+        List<ArticleCustom> resultList = new ArrayList<>();
+        ArticleCustom articleCustom = new ArticleCustom();
+        for (int i = 0; i < articleList.size(); i++) {
+            articleCustom = articleList.get(i);
+            // 用户是否赞过
+            articleCustom.setLikes(likesService.isLike(userId, articleCustom.getArticleId()));
+            // 用户是否收藏
+            articleCustom.setCollect(collectService.isCollect(userId, articleCustom.getArticleId()));
 
-        return articleList;
+            articleCustom.setLikeCount(articleService.queryLikeCount(articleCustom.getArticleId()));
+            articleCustom.setCommentCount(articleService.queryCommentCount(articleCustom.getArticleId()));
+            resultList.add(articleCustom);
+        }
+        return resultList;
     }
 
     @ResponseBody

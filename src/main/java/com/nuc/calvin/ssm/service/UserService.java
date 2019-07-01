@@ -26,7 +26,7 @@ public interface UserService {
      * @param id
      * @return
      */
-    List<UserCustom> queryInfoByUserId(int id);
+    UserCustom queryInfoByUserId(Integer id);
 
     /**
      * 修改用户信息
@@ -101,4 +101,6 @@ public interface UserService {
     UserCustom getEmail(String email);
 
     List<UserCustom> queryAllUser();
+
+    List<UserCustom> queryUserExSelf(Integer userId);
 }

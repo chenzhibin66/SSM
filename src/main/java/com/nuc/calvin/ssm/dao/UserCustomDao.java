@@ -19,8 +19,11 @@ public interface UserCustomDao {
 
     /**
      * 根据用户id查询用户信息
+     *
+     * @param id
+     * @return
      */
-    public List<UserCustom> queryInfoByUserId(int id);
+    UserCustom queryInfoByUserId(Integer id);
 
     /**
      * 修改用户id为userId的用户信息
@@ -85,7 +88,15 @@ public interface UserCustomDao {
 
     /**
      * 查询所有用户
+     *
      * @return
      */
     List<UserCustom> queryAllUser();
+
+    /**
+     * 查询除userId外的所有用户
+     * @param userId
+     * @return
+     */
+    List<UserCustom> queryUserExSelf(Integer userId);
 }

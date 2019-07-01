@@ -73,7 +73,7 @@
     <!--查询文章被点赞次数-->
     <select id="queryLikeCount" parameterType="int" resultType="int">
         select count(*)
-        form likes
+        from likes
         where articleId=#{articleId,jdbcType=INTEGER}
     </select>
 

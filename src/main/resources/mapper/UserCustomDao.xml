@@ -58,7 +58,7 @@
     <select id="queryInfoByUserId" parameterType="int" resultType="com.nuc.calvin.ssm.entity.UserCustom">
         select * from user
         <where>
-            and user.userId=#{id}
+            and user.userId=#{id,jdbcType=INTEGER}
         </where>
     </select>
 
@@ -122,5 +122,9 @@
 
     <select id="queryAllUser" parameterType="com.nuc.calvin.ssm.entity.UserCustom" resultMap="UserResultMap">
         select * from user
+    </select>
+
+    <select id="queryUserExSelf" parameterType="com.nuc.calvin.ssm.entity.UserCustom" resultMap="UserResultMap">
+        select * from user where userId not in(#{userId,jdbcType=INTEGER} )
     </select>
 </mapper>

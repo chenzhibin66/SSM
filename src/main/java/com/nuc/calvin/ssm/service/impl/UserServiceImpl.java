@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<UserCustom> queryInfoByUserId(int id) {
+    public UserCustom queryInfoByUserId(Integer id) {
 
         return userCustomDao.queryInfoByUserId(id);
     }
@@ -89,5 +89,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserCustom> queryAllUser() {
         return userCustomDao.queryAllUser();
+    }
+
+    @Override
+    public List<UserCustom> queryUserExSelf(Integer userId) {
+        return userCustomDao.queryUserExSelf(userId);
     }
 }

@@ -3,10 +3,12 @@ package com.nuc.calvin.ssm.web;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.nuc.calvin.ssm.dto.LoginOk;
 import com.nuc.calvin.ssm.dto.Ok;
+import com.nuc.calvin.ssm.dto.UserOk;
 import com.nuc.calvin.ssm.entity.User;
 import com.nuc.calvin.ssm.entity.UserCustom;
 import com.nuc.calvin.ssm.entity.UserVo;
 import com.nuc.calvin.ssm.service.UserService;
+import com.nuc.calvin.ssm.utils.CompareValueUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -83,6 +85,21 @@ public class UserController {
     @RequestMapping("/queryAllUser")
     public List<UserCustom> queryAllUser() {
         List<UserCustom> userCustomList = userService.queryAllUser();
+        return userCustomList;
+    }
+
+    /*public Ok updatePassword(HttpServletRequest request) {
+        Integer userId = Integer.valueOf(request.getParameter("userId"));
+        String password = request.getParameter("password");
+        String oldPassword = userService.queryInfoByUserId(userId).getPassword();
+
+       *//* boolean old_isEq= CompareValueUtils.isEquals(oldPassword,200)*//*
+    }*/
+    @ResponseBody
+    @RequestMapping("/queryUserExSelf")
+    public List<UserCustom> queryUserExSelf(HttpServletRequest request) {
+        Integer userId = Integer.valueOf(request.getParameter("userId"));
+        List<UserCustom> userCustomList = userService.queryUserExSelf(userId);
         return userCustomList;
     }
 }
