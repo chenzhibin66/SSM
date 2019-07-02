@@ -21,7 +21,7 @@ public class LikesController {
     private LikesService likesService;
 
     @ResponseBody
-    @RequestMapping(value = "/like", method = RequestMethod.POST)
+    @RequestMapping( "/like")
     public void like(HttpServletRequest request) {
         Integer articleId = Integer.valueOf(request.getParameter("articleId"));
         Integer userId = Integer.valueOf(request.getParameter("userId"));

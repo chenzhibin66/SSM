@@ -63,6 +63,7 @@ public class ArticleController {
 
             articleCustom.setLikeCount(articleService.queryLikeCount(articleCustom.getArticleId()));
             articleCustom.setCommentCount(articleService.queryCommentCount(articleCustom.getArticleId()));
+            articleCustom.setCollectCount(articleService.queryCollectCount(articleCustom.getArticleId()));
             resultList.add(articleCustom);
         }
         return resultList;
@@ -89,5 +90,22 @@ public class ArticleController {
         } else {
             return new Ok(0, "分享文章失败！");
         }
+    }
+
+    @ResponseBody
+    @RequestMapping("/getMyArticle")
+    public List<ArticleCustom> getArticleByUserId(HttpServletRequest request) {
+        List<ArticleCustom> articleCustomList = new ArrayList<>();
+        Integer userId = Integer.valueOf(request.getParameter("userId"));
+        articleCustomList = articleService.queryByUserId(userId);
+        return articleCustomList;
+    }
+
+    @ResponseBody
+    @RequestMapping("/deleteArticle")
+    public void deleteArticleByArticleId(HttpServletRequest request) {
+        Integer articleId = Integer.valueOf(request.getParameter("articleId"));
+        System.out.println("aaaaaaaaaaaaaa"+articleId);
+        articleService.deleteByArticle(articleId);
     }
 }

@@ -12,7 +12,7 @@ public class ArticleCustom extends Article {
     /**
      * 广告文章
      */
-    private ArticleCustom bannerArtcile;
+    private ArticleCustom bannerArticle;
     /**
      * 是否广告   1-是   0-否
      */
@@ -35,6 +35,17 @@ public class ArticleCustom extends Article {
      */
     private int likeCount;
 
+    private int collectCount;
+
+
+    public int getCollectCount() {
+        return collectCount;
+    }
+
+    public void setCollectCount(int collectCount) {
+        this.collectCount = collectCount;
+    }
+
     public User getUser() {
         return user;
     }
@@ -43,12 +54,12 @@ public class ArticleCustom extends Article {
         this.user = user;
     }
 
-    public ArticleCustom getBannerArtcile() {
-        return bannerArtcile;
+    public ArticleCustom getBannerArticle() {
+        return bannerArticle;
     }
 
-    public void setBannerArtcile(ArticleCustom bannerArtcile) {
-        this.bannerArtcile = bannerArtcile;
+    public void setBannerArticle(ArticleCustom bannerArticle) {
+        this.bannerArticle = bannerArticle;
     }
 
     public int getIsAdvertorial() {

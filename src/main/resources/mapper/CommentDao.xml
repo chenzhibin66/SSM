@@ -4,11 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.nuc.calvin.ssm.dao.CommentDao">
     <resultMap id="BaseResultMap" type="com.nuc.calvin.ssm.entity.Comment">
-        <id column="comment_id" property="commentId" jdbcType="INTEGER"/>
-        <result column="article_id" property="articleId" jdbcType="INTEGER"/>
-        <result column="user_id" property="userId" jdbcType="INTEGER"/>
-        <result column="comment_content" property="commentContent" jdbcType="VARCHAR"/>
-        <result column="comment_time" property="commentTime" jdbcType="TIMESTAMP"/>
+        <id column="commentId" property="commentId" jdbcType="INTEGER"/>
+        <result column="articleId" property="articleId" jdbcType="INTEGER"/>
+        <result column="userId" property="userId" jdbcType="INTEGER"/>
+        <result column="commentContent" property="commentContent" jdbcType="VARCHAR"/>
+        <result column="commentTime" property="commentTime" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <insert id="insert" parameterType="com.nuc.calvin.ssm.entity.Comment" useGeneratedKeys="true" keyColumn="comment_id"
@@ -16,16 +16,16 @@
         insert into comment
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="articleId != null">
-                article_id,
+                articleId,
             </if>
             <if test="userId != null">
-                user_id,
+                userId,
             </if>
             <if test="commentContent != null">
-                comment_content,
+                commentContent,
             </if>
             <if test="commentTime != null">
-                comment_time,
+                commentTime,
             </if>
         </trim>
         <trim prefix="values(" suffix=")" suffixOverrides=",">
@@ -45,18 +45,18 @@
     </insert>
 
     <sql id="Base_Column_List">
-    comment_id, user_id, article_id, comment_content, comment_time,
+    commentId, userId, articleId, commentContent, commentTime,
   </sql>
     <select id="queryByCommentId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
         select
         <include refid="Base_Column_List"></include>
         from comment
-        where comment_id=#{commentId,jdbcType=INTEGER}
+        where commentId=#{commentId,jdbcType=INTEGER}
     </select>
 
     <delete id="deleteByCommentId" parameterType="java.lang.Integer">
         delete from comment
-        where comment_id=#{commentId,jdbcType=INTEGER}
+        where commentId=#{commentId,jdbcType=INTEGER}
     </delete>
 
 
@@ -64,16 +64,16 @@
         update comemnt
         <set>
             <if test="userId != null">
-                user_id=#{userId,jdbcType=INTEGER} ,
+                userId=#{userId,jdbcType=INTEGER} ,
             </if>
             <if test="articleId != null">
-                article_id=#{articleId,jdbcType=INTEGER} ,
+                articleId=#{articleId,jdbcType=INTEGER} ,
             </if>
             <if test="commentContent != null">
-                comment_content=#{commentContent,jdbcType=VARCHAR} ,
+                commentContent=#{commentContent,jdbcType=VARCHAR} ,
             </if>
             <if test="commentTime != null">
-                commment_time=#{commentTime,jdbcType=TIMESTAMP} ,
+                commmentTime=#{commentTime,jdbcType=TIMESTAMP} ,
             </if>
         </set>
     </update>

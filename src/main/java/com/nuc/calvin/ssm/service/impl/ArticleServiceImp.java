@@ -81,6 +81,11 @@ public class ArticleServiceImp implements ArticleService {
         return articleCustomDao.queryCommentCount(articleId);
     }
 
+    @Override
+    public int queryCollectCount(Integer articleId) {
+        return articleCustomDao.queryCollectCount(articleId);
+    }
+
     /**
      * 模糊查询文章
      * @param keyWord

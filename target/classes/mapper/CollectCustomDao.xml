@@ -20,7 +20,6 @@
             <result column="headImg" property="headImg" jdbcType="VARCHAR"/>
             <result column="signature" property="signature" jdbcType="VARCHAR"/>
             <result column="sex" property="sex" jdbcType="INTEGER"/>
-            <result column="singUpTime" property="singUpTime" jdbcType="TIMESTAMP"/>
         </association>
 
         <association property="article" javaType="com.nuc.calvin.ssm.entity.ArticleCustom">
@@ -28,7 +27,6 @@
             <id column="userId" property="userId" jdbcType="INTEGER"/>
             <id column="articleTitle" property="articleTitle" jdbcType="VARCHAR"/>
             <id column="articleUrl" property="articleUrl" jdbcType="VARCHAR"/>
-            <id column="postTime" property="postTime" jdbcType="TIMESTAMP"/>
         </association>
     </resultMap>
 

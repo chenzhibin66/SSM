@@ -59,6 +59,14 @@ public interface ArticleService {
     int queryCommentCount(Integer articleId);
 
     /**
+     * 查询文章被收藏数
+     * @param articleId
+     * @return
+     */
+    int queryCollectCount(Integer articleId);
+
+
+    /**
      * 根据关键字查询相关文章
      *
      * @param keyWord

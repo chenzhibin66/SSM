@@ -57,6 +57,15 @@ public interface ArticleCustomDao {
     int queryCommentCount(Integer articleId);
 
     /**
+     * 查询被收藏次数
+     * @param articleId
+     * @return
+     */
+    int queryCollectCount(Integer articleId);
+
+
+
+    /**
      * 根据用户id查询被订阅的文章
      *
      * @param userId

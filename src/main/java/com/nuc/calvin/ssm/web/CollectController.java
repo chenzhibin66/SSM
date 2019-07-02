@@ -15,7 +15,7 @@ import java.util.Date;
  * @Description:
  */
 @Controller("collectController")
-@RequestMapping("/collect")
+@RequestMapping("/collection")
 public class CollectController {
 
     @Autowired
@@ -23,8 +23,9 @@ public class CollectController {
 
     @ResponseBody
     @RequestMapping("/collect")
-    public void collect(int articleId, HttpServletRequest request) {
-        int userId = Integer.parseInt(request.getParameter("userId"));
+    public void collect(HttpServletRequest request) {
+        Integer articleId = Integer.valueOf(request.getParameter("articleId"));
+        Integer userId = Integer.valueOf(request.getParameter("userId"));
         CollectCustom collection = new CollectCustom();
         collection.setUserId(userId);
         collection.setArticleId(articleId);
@@ -36,9 +37,9 @@ public class CollectController {
 
     @ResponseBody
     @RequestMapping("/unCollect")
-    public void unCollect(int articleId,HttpServletRequest request){
+    public void unCollect(int articleId, HttpServletRequest request) {
         int userId = Integer.parseInt(request.getParameter("userId"));
-        CollectCustom collectCustom=new CollectCustom();
+        CollectCustom collectCustom = new CollectCustom();
         collectCustom.setUserId(userId);
         collectCustom.setArticleId(articleId);
         collectService.unCollect(collectCustom);

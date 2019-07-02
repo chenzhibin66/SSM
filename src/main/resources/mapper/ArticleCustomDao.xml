@@ -8,7 +8,6 @@
         <result column="userId" property="userId" jdbcType="INTEGER"/>
         <result column="articleTitle" property="articleTitle" jdbcType="VARCHAR"/>
         <result column="articleUrl" property="articleUrl" jdbcType="VARCHAR"/>
-        <result column="postTime" property="postTime" jdbcType="TIMESTAMP"/>
 
         <!-- 一对一关系-->
         <association property="user" javaType="com.nuc.calvin.ssm.entity.User">
@@ -29,19 +28,15 @@
         and user.userId=article.userId
     </select>
 
-    <!-- 根据微博id删除微博 -->
+    <!-- 根据文章id删除文章 -->
     <delete id="deleteByArticleId" parameterType="int">
         delete from article where articleId=#{articleId,jdbcType=INTEGER}
     </delete>
 
-    <!-- 根据用户id查询微博 附加user昵称 头像 -->
+    <!-- 根据用户id查询文章 附加user昵称 头像 -->
     <select id="queryArticleByUserId" parameterType="Integer" resultMap="ArticleResultMap">
-        select
-        user.username,user.headImg,article.* from article,user
-        <where>
-            and article.userId=#{userId,jdbcType=INTEGER}
-            and article.userId=user.userIdorder by post_time desc
-        </where>
+
+     select * from article as a inner join user as u on a.userId=u.userId and a.userId=#{userId,jdbcType=INTEGER}
     </select>
 
     <!-- 发文章 -->
@@ -52,14 +47,21 @@
 
     </insert>
 
-    <!--查询微博被评论次数-->
+    <!--查询文章被评论次数-->
     <select id="queryCommentCount" parameterType="int" resultType="int">
         select count(*)
         from comment
         where comment.articleId=#{articleId,jdbcType=INTEGER}
     </select>
 
-    <!--查询微博被回复次数-->
+    <!--查询文章被收藏次数-->
+    <select id="queryCollectCount" parameterType="int" resultType="int">
+       select count(*)
+       from collect
+       where collect.articleId=#{articleId,jdbcType=INTEGER}
+   </select>
+
+    <!--查询文章被回复次数-->
     <select id="queryReplyCount" parameterType="int" resultType="int">
         select count(*)
         from reply as r
@@ -87,6 +89,5 @@
 
     <select id="queryAllArticle" resultMap="ArticleResultMap">
         select * from article as a inner join user as u on a.userId=u.userId
-        
     </select>
 </mapper>
