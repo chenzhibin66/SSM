@@ -94,9 +94,11 @@ public interface UserCustomDao {
     List<UserCustom> queryAllUser();
 
     /**
-     * 查询除userId外的所有用户
+     * 查询除userId外的热门用户
      * @param userId
      * @return
      */
     List<UserCustom> queryUserExSelf(Integer userId);
+
+
 }

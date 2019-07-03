@@ -87,14 +87,7 @@ public class UserController {
         List<UserCustom> userCustomList = userService.queryAllUser();
         return userCustomList;
     }
-
-    /*public Ok updatePassword(HttpServletRequest request) {
-        Integer userId = Integer.valueOf(request.getParameter("userId"));
-        String password = request.getParameter("password");
-        String oldPassword = userService.queryInfoByUserId(userId).getPassword();
-
-       *//* boolean old_isEq= CompareValueUtils.isEquals(oldPassword,200)*//*
-    }*/
+    
     @ResponseBody
     @RequestMapping("/queryUserExSelf")
     public List<UserCustom> queryUserExSelf(HttpServletRequest request) {

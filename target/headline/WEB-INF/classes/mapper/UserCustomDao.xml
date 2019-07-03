@@ -126,5 +126,8 @@
 
     <select id="queryUserExSelf" parameterType="com.nuc.calvin.ssm.entity.UserCustom" resultMap="UserResultMap">
         select * from user where userId not in(#{userId,jdbcType=INTEGER} )
+        order by rand() limit 5
     </select>
+
+
 </mapper>

@@ -94,4 +94,10 @@ public interface ArticleCustomDao {
      * @return
      */
     List<ArticleCustom> queryAllArticle();
+
+    /**
+     * 查询热门文章
+     * @return
+     */
+    List<ArticleCustom> queryHotArticle();
 }

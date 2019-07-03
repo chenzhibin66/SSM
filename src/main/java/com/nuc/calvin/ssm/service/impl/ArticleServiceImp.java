@@ -104,4 +104,9 @@ public class ArticleServiceImp implements ArticleService {
     public List<ArticleCustom> queryAllArticle() {
         return articleCustomDao.queryAllArticle();
     }
+
+    @Override
+    public List<ArticleCustom> queryHotArticle() {
+        return articleCustomDao.queryHotArticle();
+    }
 }

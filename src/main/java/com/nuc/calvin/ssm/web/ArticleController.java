@@ -105,7 +105,27 @@ public class ArticleController {
     @RequestMapping("/deleteArticle")
     public void deleteArticleByArticleId(HttpServletRequest request) {
         Integer articleId = Integer.valueOf(request.getParameter("articleId"));
-        System.out.println("aaaaaaaaaaaaaa"+articleId);
+        System.out.println("aaaaaaaaaaaaaa" + articleId);
         articleService.deleteByArticle(articleId);
+    }
+
+    @ResponseBody
+    @RequestMapping("/queryHotArticle")
+    public List<ArticleCustom> queryHotArticle(HttpServletRequest request) {
+        Integer userId = Integer.valueOf(request.getParameter("userId"));
+        List<ArticleCustom> articleCustomList = articleService.queryHotArticle();
+        List<ArticleCustom> hotList = new ArrayList<>();
+        ArticleCustom hotArticle = new ArticleCustom();
+        for (int i = 0; i < articleCustomList.size(); i++) {
+            hotArticle = articleCustomList.get(i);
+            hotArticle.setLikes(likesService.isLike(userId, hotArticle.getArticleId()));
+            hotArticle.setCollect(collectService.isCollect(userId, hotArticle.getArticleId()));
+            hotArticle.setLikeCount(articleService.queryLikeCount(hotArticle.getArticleId()));
+            hotArticle.setCollectCount(articleService.queryCollectCount(hotArticle.getArticleId()));
+            hotArticle.setCommentCount(articleService.queryCommentCount(hotArticle.getArticleId()));
+            hotList.add(hotArticle);
+
+        }
+        return hotList;
     }
 }

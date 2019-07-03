@@ -90,4 +90,9 @@
     <select id="queryAllArticle" resultMap="ArticleResultMap">
         select * from article as a inner join user as u on a.userId=u.userId
     </select>
+
+    <select id="queryHotArticle" resultMap="ArticleResultMap">
+         select * from article as a inner join user as u on a.userId=u.userId
+         order by rand() limit 5
+    </select>
 </mapper>
