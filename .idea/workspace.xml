@@ -7,58 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fdd5bf5-f7e2-4216-8a55-b22da8bc8f40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/BannerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/BannerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/BannerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/RelationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/BannerCustomDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/BannerCustomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/BannerCustomDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/BannerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/BannerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/Banner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/Banner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/BannerCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/BannerCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/ArticleServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/ArticleServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/CollectServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/CollectServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/CommentServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/CommentServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/LikesServiveImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/LikesServiveImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/RelationServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/RelationServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/CollectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/CollectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ArticleCustomDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ArticleCustomDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BannerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BannerDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CollectCustomDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CollectCustomDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CommentCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CommentCustom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserCustomDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserCustomDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/impl/ArticleServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/impl/ArticleServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/impl/CollectServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/impl/CollectServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/impl/CommentServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/impl/CommentServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/impl/LikesServiveImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/impl/LikesServiveImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/impl/RelationServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/impl/RelationServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/CollectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/CollectController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ArticleCustomDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ArticleCustomDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CollectCustomDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CollectCustomDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CommentCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CommentCustom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserCustomDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserCustomDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/impl/ArticleServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/impl/ArticleServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/impl/CollectServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/impl/CollectServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/impl/CommentServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/impl/CommentServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/impl/LikesServiveImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/impl/LikesServiveImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/impl/RelationServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/impl/RelationServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/CollectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/CollectController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/mapper/ArticleCustomDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/mapper/ArticleCustomDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/mapper/CollectCustomDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/mapper/CollectCustomDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/mapper/CommentCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/mapper/CommentCustom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/mapper/UserCustomDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/mapper/UserCustomDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/BannerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/BannerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BannerCustomDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BannerCustomDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/impl/BannerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/service/impl/BannerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/impl/BannerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/service/impl/BannerServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -90,38 +44,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ArticleCustomDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="88" column="76" lean-forward="true" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="76" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BannerCustomDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="19" column="85" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="85" />
+            <state relative-caret-position="561">
+              <caret line="20" column="22" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="20" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/BannerService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/ArticleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/BannerServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+            <state relative-caret-position="99">
+              <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/BannerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="123">
+              <caret line="23" column="36" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,38 +74,72 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/ArticleController.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BannerCustomDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-822">
-              <caret line="21" selection-start-line="21" selection-end-line="22" selection-end-column="27" />
+            <state relative-caret-position="124">
+              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CollectCustomDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="56" column="38" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="56" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/BannerServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#711#712#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/ArticleService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/Banner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2607">
-              <caret line="83" column="13" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
+            <state relative-caret-position="210">
+              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+              <folding>
+                <element signature="e#316#317#0" expanded="true" />
+                <element signature="e#365#366#0" expanded="true" />
+                <element signature="e#405#406#0" expanded="true" />
+                <element signature="e#442#443#0" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
+                <element signature="e#525#526#0" expanded="true" />
+                <element signature="e#567#568#0" expanded="true" />
+                <element signature="e#605#606#0" expanded="true" />
+                <element signature="e#639#640#0" expanded="true" />
+                <element signature="e#693#694#0" expanded="true" />
+                <element signature="e#739#740#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/ArticleServiceImp.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/BannerCustom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="17" selection-start-line="17" selection-end-line="18" selection-end-column="26" />
+            <state relative-caret-position="223">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1663#1664#0" expanded="true" />
-                <element signature="e#1728#1729#0" expanded="true" />
-                <element signature="e#2009#2010#0" expanded="true" />
-                <element signature="e#2077#2078#0" expanded="true" />
+                <element signature="e#269#270#0" expanded="true" />
+                <element signature="e#307#308#0" expanded="true" />
+                <element signature="e#339#340#0" expanded="true" />
+                <element signature="e#224#225#0" expanded="true" />
+                <element signature="e#254#255#0" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#339#340#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -181,9 +148,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/ArticleCustom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+            <state relative-caret-position="131">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
+                <element signature="e#615#616#0" expanded="true" />
                 <element signature="e#650#651#0" expanded="true" />
                 <element signature="e#703#704#0" expanded="true" />
                 <element signature="e#751#752#0" expanded="true" />
@@ -193,12 +161,16 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/CommentService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/ArticleServiceImp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+            <state relative-caret-position="33">
+              <caret line="17" selection-start-line="17" selection-end-line="18" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1663#1664#0" expanded="true" />
+                <element signature="e#1728#1729#0" expanded="true" />
+                <element signature="e#2009#2010#0" expanded="true" />
+                <element signature="e#2077#2078#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -248,7 +220,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/LikesController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CommentDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/ArticleCustom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/ArticleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/ArticleCustomDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/UserCustomDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/ArticleController.java" />
@@ -266,17 +237,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CollectCustomDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/CollectController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/BannerCustom.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/Banner.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/BannerDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/dao/BannerCustomDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/BannerDao.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ArticleCustomDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/BannerCustomDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/BannerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/BannerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/ArticleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/BannerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/BannerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/BannerCustom.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/BannerCustomDao.xml" />
       </list>
     </option>
   </component>
@@ -305,10 +277,10 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1802" />
-    <option name="y" value="52" />
-    <option name="width" value="1490" />
-    <option name="height" value="990" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -380,6 +352,18 @@
               <item name="nuc" type="462c0819:PsiDirectoryNode" />
               <item name="calvin" type="462c0819:PsiDirectoryNode" />
               <item name="ssm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="headline" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="nuc" type="462c0819:PsiDirectoryNode" />
+              <item name="calvin" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="headline" type="b2602c69:ProjectViewProjectNode" />
@@ -507,8 +491,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -757,7 +741,8 @@
       <workItem from="1562113184746" duration="18946000" />
       <workItem from="1562210031287" duration="4366000" />
       <workItem from="1562228263899" duration="2862000" />
-      <workItem from="1562241300698" duration="7382000" />
+      <workItem from="1562241300698" duration="8597000" />
+      <workItem from="1562251920489" duration="4181000" />
     </task>
     <servers />
   </component>
@@ -794,13 +779,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257836000" />
+    <option name="totallyTimeSpent" value="263232000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1913" y="53" width="1358" height="814" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27307692" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29155496" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -808,7 +793,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26832846" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3796034" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -817,7 +802,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.329429" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.4362606" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.4340176" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="14" />
@@ -1001,13 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserCustomDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3663">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/Relation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1059,13 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CollectCustomDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="56" column="38" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/CommentController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1090,26 +1061,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-835">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/Banner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding>
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1140,50 +1091,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/BannerCustom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding>
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BannerDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-99">
-          <caret line="9" column="78" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/Article.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1191">
           <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/ArticleCustom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-          <folding>
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1198,23 +1111,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ArticleCustomDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BannerDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="88" column="76" lean-forward="true" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="76" />
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ArticleDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="9" column="78" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/BannerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserCustomDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3663">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/ArticleService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2607">
-          <caret line="83" column="13" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
+        <state relative-caret-position="2475">
+          <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/BannerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/ArticleServiceImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="33">
           <caret line="17" selection-start-line="17" selection-end-line="18" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1226,50 +1183,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/BannerService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/Banner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state relative-caret-position="210">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/BannerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+        <state relative-caret-position="102">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/ArticleController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CollectCustomDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-822">
-          <caret line="21" selection-start-line="21" selection-end-line="22" selection-end-column="27" />
+        <state relative-caret-position="310">
+          <caret line="56" column="38" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="56" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/BannerCustom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#269#270#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#224#225#0" expanded="true" />
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/BannerController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/entity/ArticleCustom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="131">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ArticleCustomDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="20" column="22" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="20" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BannerCustomDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="19" column="85" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="85" />
+        <state relative-caret-position="124">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
         </state>
       </provider>
     </entry>
