@@ -14,6 +14,8 @@ public class Banner {
      */
     private Integer articleId;
 
+    private String bannerImage;
+
     public Integer getBannerId() {
         return bannerId;
     }
@@ -28,5 +30,13 @@ public class Banner {
 
     public void setArticleId(Integer articleId) {
         this.articleId = articleId;
+    }
+
+    public String getBannerImage() {
+        return bannerImage;
+    }
+
+    public void setBannerImage(String bannerImage) {
+        this.bannerImage = bannerImage;
     }
 }

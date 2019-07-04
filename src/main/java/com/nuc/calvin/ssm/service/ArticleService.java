@@ -22,8 +22,7 @@ public interface ArticleService {
 
     /**
      * 发微博
-     *
-     * @param
+     * @param articleCustom
      */
     void post(ArticleCustom articleCustom);
 

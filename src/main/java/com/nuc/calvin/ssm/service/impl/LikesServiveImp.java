@@ -16,7 +16,7 @@ import java.util.List;
  * @author Calvin
  * @Description:
  */
-@Transactional
+@Transactional(rollbackFor = Exception.class)
 @Service("likesService")
 public class LikesServiveImp implements LikesService {
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nuc.calvin.ssm.dao.BannerCustomDao">
+    <resultMap id="BannerResultMap" type="com.nuc.calvin.ssm.entity.BannerCustom">
+        <id column="bannerId" property="bannerId" jdbcType="INTEGER"/>
+        <result column="articleId" property="articleId" jdbcType="INTEGER"/>
+        <result column="bannerImage" property="bannerImage" jdbcType="VARCHAR"/>
+
+        <association property="article" javaType="com.nuc.calvin.ssm.entity.Article">
+            <id column="articleId" property="articleId" jdbcType="INTEGER"/>
+            <result column="userId" property="userId" jdbcType="INTEGER"/>
+            <result column="articleTitle" property="articleTitle" jdbcType="VARCHAR"/>
+            <result column="articleUrl" property="articleUrl" jdbcType="VARCHAR"/>
+        </association>
+    </resultMap>
+
+    <select id="queryAllBanner" resultMap="BannerResultMap">
+         select * from banner as b inner join article as a on b.articleId=a.articleId
+    </select>
+</mapper>

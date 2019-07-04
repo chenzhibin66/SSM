@@ -9,12 +9,6 @@ import java.util.List;
  * @Description:
  */
 public interface BannerDao {
-    /**
-     * 查询所有广告
-     *
-     * @return
-     */
-    List<Banner> queryBanner();
 
     /**
      * 根据广告id查询广告

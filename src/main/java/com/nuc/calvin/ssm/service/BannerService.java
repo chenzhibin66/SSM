@@ -1,6 +1,5 @@
-package com.nuc.calvin.ssm.dao;
+package com.nuc.calvin.ssm.service;
 
-import com.nuc.calvin.ssm.entity.Banner;
 import com.nuc.calvin.ssm.entity.BannerCustom;
 
 import java.util.List;
@@ -9,7 +8,11 @@ import java.util.List;
  * @author Calvin
  * @Description:
  */
-public interface BannerCustomDao {
-
+public interface BannerService {
+    /**
+     * 查询所有广告
+     *
+     * @return
+     */
     List<BannerCustom> queryAllBanner();
 }

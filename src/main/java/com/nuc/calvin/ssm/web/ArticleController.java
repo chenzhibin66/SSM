@@ -128,4 +128,14 @@ public class ArticleController {
         }
         return hotList;
     }
+
+
+    @ResponseBody
+    @RequestMapping(value = "/queryArticleByWord")
+    public List<ArticleCustom> queryArticleByWord(HttpServletRequest request) {
+        String keyWord = request.getParameter("keyWord");
+        List<ArticleCustom> list = new ArrayList<>();
+        list = articleService.queryArticleByWord(keyWord);
+        return list;
+    }
 }

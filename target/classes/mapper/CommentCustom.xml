@@ -36,12 +36,10 @@
         values (#{user.userId,jdbcType=INTEGER}   ,#{article.articleId,jdbcType=INTEGER}  ,#{commentContent,jdbcType=VARCHAR} ,#{commentTime,jdbcType=TIMESTAMP} );
     </insert>
 
-    <!-- 查询微博Id的评论 -->
+    <!-- 查询文章Id的评论 -->
     <select id="queryComment" parameterType="int" resultMap="CommentResultMap">
-        select b.userId,a.headImg,b.commentId,a.headImg,b.commentContent
-        ,b.commentTime,a.username
-        from user as a,comment as b
-        where a.userId=b.userId and b.articleId=#{articleId}
+        select * from comment inner join user where comment.userId=user.userId
+        and articleId=#{articleId,jdbcType=INTEGER}
     </select>
 
     <!--查询评论回复数-->

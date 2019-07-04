@@ -13,7 +13,7 @@ import java.util.List;
  * @author Calvin
  * @Description:
  */
-@Transactional
+@Transactional(rollbackFor = Exception.class)
 @Service("relationService")
 public class RelationServiceImp implements RelationService {
 

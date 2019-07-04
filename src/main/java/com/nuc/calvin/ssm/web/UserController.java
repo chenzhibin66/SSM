@@ -7,6 +7,7 @@ import com.nuc.calvin.ssm.dto.UserOk;
 import com.nuc.calvin.ssm.entity.User;
 import com.nuc.calvin.ssm.entity.UserCustom;
 import com.nuc.calvin.ssm.entity.UserVo;
+import com.nuc.calvin.ssm.service.RelationService;
 import com.nuc.calvin.ssm.service.UserService;
 import com.nuc.calvin.ssm.utils.CompareValueUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private RelationService relationService;
 
     /**
      * 用户登录
@@ -87,12 +91,33 @@ public class UserController {
         List<UserCustom> userCustomList = userService.queryAllUser();
         return userCustomList;
     }
-    
+
     @ResponseBody
     @RequestMapping("/queryUserExSelf")
     public List<UserCustom> queryUserExSelf(HttpServletRequest request) {
         Integer userId = Integer.valueOf(request.getParameter("userId"));
         List<UserCustom> userCustomList = userService.queryUserExSelf(userId);
-        return userCustomList;
+        List<UserCustom> result = new ArrayList<>();
+        UserCustom user = new UserCustom();
+        for (int i = 0; i < userCustomList.size(); i++) {
+            user = userCustomList.get(i);
+            int articleCount = userService.queryArticleCount(user.getUserId());
+            int followCount = userService.queryFollowCount(user.getUserId());
+            int fansCount = userService.queryFansCount(user.getUserId());
+            user.setArticleCount(articleCount);
+            user.setFansCount(fansCount);
+            user.setFollowCount(followCount);
+            result.add(user);
+        }
+        return result;
     }
+
+    @ResponseBody
+    @RequestMapping("/queryUserByWord")
+    public List<UserCustom> queryUserByWord(HttpServletRequest request) {
+        String keyWord = request.getParameter("keyWord");
+        List<UserCustom> userList = userService.queryUserByWord(keyWord);
+        return userList;
+    }
+
 }

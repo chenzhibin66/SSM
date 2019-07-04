@@ -13,8 +13,8 @@ import java.util.List;
  * @author Calvin
  * @Description:
  */
-@Transactional
-@Service("collcetService")
+@Transactional(rollbackFor = Exception.class)
+@Service("collectService")
 public class CollectServiceImp implements CollectService {
 
     @Autowired

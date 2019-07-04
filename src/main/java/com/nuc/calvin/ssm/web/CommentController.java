@@ -60,4 +60,16 @@ public class CommentController {
     public void deleteComment(int commentId) {
         commentService.deleteCommentById(commentId);
     }
+
+    @ResponseBody
+    @RequestMapping("/commentList")
+    public List<CommentCustom> queryComment(HttpServletRequest request) {
+        Integer articleId = Integer.valueOf(request.getParameter("articleId"));
+        List<CommentCustom> commentList = commentService.queryComment(articleId);
+        for (CommentCustom commentCustom : commentList) {
+            commentCustom.setTime(DateConvert.convert2json(commentCustom.getCommentTime().getTime()));
+        }
+        return commentList;
+    }
+
 }

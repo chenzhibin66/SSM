@@ -51,14 +51,11 @@
 
     <!-- 查询我的收藏列表 -->
     <select id="queryAllCollection" parameterType="int" resultMap="CollectResultMap">
-        select c.collectTime,u.headImg,wu.headImg asauthorHeadImg,
-        wu.username as authorName,w.*
-        from collcet as c left join article as w on(c.articleId=w.articleId),
-        user as u,user as wu
-        where c.userId=u.userId and c.article_id in(
-        select w.articleId
-        from article as where
-        where c.userId=#{userId,jdbcType=INTEGER}
-        ) and wu.userId=w.userId order by c.collectTime desc
+      select * from article
+      left join user on article.userId=user.userId
+      left join collect on collect.articleId=article.articleId where collect.userId=#{userId,jdbcType=INTEGER}
+      order by collect.collectTime asc
+
+
     </select>
 </mapper>

@@ -112,7 +112,7 @@
 
     <!-- 模糊查询-->
     <select id="queryUserByWord" parameterType="String" resultMap="UserResultMap">
-    select * from user where user.username like '%{keyWord,jdbcType=VARCHAR} %'
+    select * from user where user.username like concat(concat('%',#{keyWord,jdbcType=VARCHAR}  ),'%')
 </select>
 
 

@@ -105,6 +105,10 @@ public class ArticleServiceImp implements ArticleService {
         return articleCustomDao.queryAllArticle();
     }
 
+    /**
+     * 查询热门文章
+     * @return
+     */
     @Override
     public List<ArticleCustom> queryHotArticle() {
         return articleCustomDao.queryHotArticle();

@@ -17,7 +17,7 @@ public interface CommentService {
     void addComment(CommentCustom commentCustom);
 
     /**
-     * 查询微博下的评论
+     * 查询文章下的评论
      *
      * @param articleId
      * @return
