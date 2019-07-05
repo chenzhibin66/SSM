@@ -54,7 +54,7 @@
 
     <!-- 根据userID查询评论列表 -->
     <select id="queryCommentByUserId" parameterType="int" resultMap="CommentResultMap">
-        select u.username,u.headImg,c.*,w.userId,wu.username,w.postTime,w.articleUrl
+        select u.username,u.headImg,c.*,w.userId,wu.username,w.articleTitle
         from comment as c,user as u,article as w,user as wu
         where u.userId=c.userId
         and w.articleId=c.articleId

@@ -5,6 +5,7 @@ import com.nuc.calvin.ssm.entity.CommentCustom;
 import com.nuc.calvin.ssm.entity.User;
 import com.nuc.calvin.ssm.service.CommentService;
 import com.nuc.calvin.ssm.utils.DateConvert;
+import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -72,4 +73,11 @@ public class CommentController {
         return commentList;
     }
 
+    @ResponseBody
+    @RequestMapping("/queryCommentByUserId")
+    public List<CommentCustom> queryCommentByUserId(HttpServletRequest request) {
+        Integer userId = Integer.valueOf(request.getParameter("userId"));
+        return commentService.queryCommentByUserId(userId);
+
+    }
 }
