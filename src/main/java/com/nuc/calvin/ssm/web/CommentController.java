@@ -77,7 +77,11 @@ public class CommentController {
     @RequestMapping("/queryCommentByUserId")
     public List<CommentCustom> queryCommentByUserId(HttpServletRequest request) {
         Integer userId = Integer.valueOf(request.getParameter("userId"));
-        return commentService.queryCommentByUserId(userId);
+        List<CommentCustom> list = commentService.queryCommentByUserId(userId);
+        for (CommentCustom commentCustom : list) {
+            commentCustom.setTime(DateConvert.convert2json(commentCustom.getCommentTime().getTime()));
+        }
+        return list;
 
     }
 }

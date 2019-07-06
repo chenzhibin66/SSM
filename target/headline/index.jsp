@@ -1,40 +1,40 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IT头条</title>
-</head>
-<body>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+    <head>
+        <title>IT头条信息管理系统</title>
+        <style>
+            .main {
+            text-align: center; /*让div内部文字居中*/
+            background-color: #9cccff;
+            border-radius: 20px;
+            width: 300px;
+            height: 200px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            }
+        </style>
+    </head>
 
-<div class="site-wrapper">
+    <body>
+        <div class="main">
+            <br/>
+            欢迎来到IT头条信息管理系统
+            <br/><br/>
+            <form action="/headline/user/managerLogin" method="post">
+                账户: <input name="account" type="text"/><br/>
+                <br/>
 
-    <div class="site-wrapper-inner">
-        <div class="cover-container">
-            <div class="inner cover">
-                <h1 class="cover-heading">IT头条信息管理</h1>
-                <h1 class="cover-heading" style="color: #52c250" name="register_success">${register_success }</h1>
-                <h1 class="cover-heading" style="color: #52c250" name="register_success">${updatepassword_success }</h1>
-                <form class="form-signin" action="${pageContext.request.contextPath }/user_Login.action" method="post">
-                    <div class="from-group">
-                        <input type="text" name="userCustom.email" class="form-control" placeholder="用户邮箱"
-                               required="required" autofocus="autofocus">
-                    </div>
-                    <div class="from-group">
-                        <input type="password" name="userCustom.password" class="form-control" placeholder="密码"
-                               required="required">
-                    </div>
-                    <br>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
-                </form>
+                密码: <input type="password" name="password"/><br/>
+                <br/>
 
-            </div>
+                <button type="submit" name="提交">提交</button>
+
+            </form>
         </div>
-    </div>
-</div>
 
-</body>
-</html>
+    </body>
+    </html>

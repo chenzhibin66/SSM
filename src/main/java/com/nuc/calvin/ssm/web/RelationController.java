@@ -1,13 +1,16 @@
 package com.nuc.calvin.ssm.web;
 
 import com.nuc.calvin.ssm.entity.Relation;
+import com.nuc.calvin.ssm.entity.UserCustom;
 import com.nuc.calvin.ssm.service.RelationService;
+import com.nuc.calvin.ssm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * @author Calvin
@@ -19,6 +22,9 @@ public class RelationController {
 
     @Autowired
     private RelationService relationService;
+
+    @Autowired
+    private UserService userService;
 
     /**
      * 关注  flag=1 为陌生  flag=2为对方已关注自己
@@ -47,6 +53,14 @@ public class RelationController {
         relation.setUserId(my_id);
         relation.setFollowId(user_id);
         relationService.unFollow(relation, flagId);
+    }
 
+
+    @ResponseBody
+    @RequestMapping("/listFollow")
+    public List<UserCustom> listFollow(HttpServletRequest request) {
+        Integer userId = Integer.valueOf(request.getParameter("userId"));
+        List<UserCustom> followlist = userService.queryFollowList(userId);
+        return followlist;
     }
 }

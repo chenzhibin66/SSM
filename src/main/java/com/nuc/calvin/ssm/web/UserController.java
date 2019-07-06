@@ -1,15 +1,11 @@
 package com.nuc.calvin.ssm.web;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.nuc.calvin.ssm.dto.LoginOk;
 import com.nuc.calvin.ssm.dto.Ok;
-import com.nuc.calvin.ssm.dto.UserOk;
 import com.nuc.calvin.ssm.entity.User;
 import com.nuc.calvin.ssm.entity.UserCustom;
-import com.nuc.calvin.ssm.entity.UserVo;
 import com.nuc.calvin.ssm.service.RelationService;
 import com.nuc.calvin.ssm.service.UserService;
-import com.nuc.calvin.ssm.utils.CompareValueUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,10 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.io.BufferedReader;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -40,9 +33,18 @@ public class UserController {
     /**
      * 用户登录
      *
-     * @param request
+     * @param
      * @return
      */
+
+    @RequestMapping("/managerLogin")
+    public String managerLogin(String account, String password, HttpSession sessiona) {
+        List<UserCustom> users = userService.queryAllUser();
+        sessiona.setAttribute("users", users);
+        return "main";
+    }
+
+
     @ResponseBody
     @RequestMapping("/loginUser")
     public List<LoginOk> loginUser(HttpServletRequest request) {
@@ -89,7 +91,19 @@ public class UserController {
     @RequestMapping("/queryAllUser")
     public List<UserCustom> queryAllUser() {
         List<UserCustom> userCustomList = userService.queryAllUser();
-        return userCustomList;
+        List<UserCustom> list = new ArrayList<>();
+        UserCustom userCustom = new UserCustom();
+        for (int i = 0; i < userCustomList.size(); i++) {
+            userCustom = userCustomList.get(i);
+            int articleCount = userService.queryArticleCount(userCustom.getUserId());
+            int followCount = userService.queryFollowCount(userCustom.getUserId());
+            int fansCount = userService.queryFansCount(userCustom.getUserId());
+            userCustom.setArticleCount(articleCount);
+            userCustom.setFansCount(fansCount);
+            userCustom.setFollowCount(followCount);
+            list.add(userCustom);
+        }
+        return list;
     }
 
     @ResponseBody

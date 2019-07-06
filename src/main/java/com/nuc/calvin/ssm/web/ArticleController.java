@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -137,5 +138,12 @@ public class ArticleController {
         List<ArticleCustom> list = new ArrayList<>();
         list = articleService.queryArticleByWord(keyWord);
         return list;
+    }
+
+    @RequestMapping("articleManage")
+    public String articleManage(HttpSession session) {
+        List<ArticleCustom> article = articleService.queryAllArticle();
+        session.setAttribute("article", article);
+        return "article";
     }
 }

@@ -95,4 +95,5 @@ public class UserServiceImpl implements UserService {
     public List<UserCustom> queryUserExSelf(Integer userId) {
         return userCustomDao.queryUserExSelf(userId);
     }
+
 }

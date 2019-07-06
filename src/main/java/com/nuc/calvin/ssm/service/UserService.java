@@ -103,4 +103,5 @@ public interface UserService {
     List<UserCustom> queryAllUser();
 
     List<UserCustom> queryUserExSelf(Integer userId);
+
 }
