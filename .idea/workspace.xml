@@ -7,32 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fdd5bf5-f7e2-4216-8a55-b22da8bc8f40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/article.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/BannerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/BannerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/RelationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/RelationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nuc/calvin/ssm/web/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/BannerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/BannerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/RelationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/RelationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nuc/calvin/ssm/web/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/BannerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/BannerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/RelationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/RelationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/com/nuc/calvin/ssm/web/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/WEB-INF/classes/spring/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/WEB-INF/classes/spring/spring-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/headline/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/headline/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -236,9 +211,9 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1726" />
+    <option name="y" value="77" />
     <option name="width" value="1940" />
     <option name="height" value="1050" />
   </component>
@@ -250,138 +225,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="headline" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="headline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="headline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="headline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="headline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="headline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="nuc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="headline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="nuc" type="462c0819:PsiDirectoryNode" />
-              <item name="calvin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="headline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="nuc" type="462c0819:PsiDirectoryNode" />
-              <item name="calvin" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="headline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="nuc" type="462c0819:PsiDirectoryNode" />
-              <item name="calvin" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="headline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="nuc" type="462c0819:PsiDirectoryNode" />
-              <item name="calvin" type="462c0819:PsiDirectoryNode" />
-              <item name="ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="headline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="headline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="headline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="headline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="headline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="headline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -639,7 +485,8 @@
       <workItem from="1562305969294" duration="7000" />
       <workItem from="1562308234788" duration="15571000" />
       <workItem from="1562371731431" duration="15139000" />
-      <workItem from="1562406186829" duration="674000" />
+      <workItem from="1562406186829" duration="1301000" />
+      <workItem from="1562549464958" duration="625000" />
     </task>
     <servers />
   </component>
@@ -676,13 +523,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300015000" />
+    <option name="totallyTimeSpent" value="301267000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="1913" y="53" width="1358" height="814" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21514745" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -690,7 +536,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3838527" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3973607" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -699,7 +545,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.329429" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.4348442" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.35410765" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="14" />
